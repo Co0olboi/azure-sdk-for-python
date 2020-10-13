@@ -1,0 +1,28 @@
+
+===============================
+Cognitive Services Personalizer
+===============================
+
+
+***************
+Client Packages
+***************
+
+
+------------------------------------
+azure-cognitiveservices-personalizer
+------------------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-cognitiveservices-personalizer"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-cognitiveservices-personalizer', 'azure-cognitiveservices-personalizer')
+        </script>
+    </embed>
+
+------------
+

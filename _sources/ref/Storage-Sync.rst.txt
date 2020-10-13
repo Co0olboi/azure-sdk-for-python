@@ -1,0 +1,28 @@
+
+============
+Storage Sync
+============
+
+
+*******************
+Management Packages
+*******************
+
+
+----------------------
+azure-mgmt-storagesync
+----------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-storagesync"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-storagesync', 'azure-mgmt-storagesync')
+        </script>
+    </embed>
+
+------------
+

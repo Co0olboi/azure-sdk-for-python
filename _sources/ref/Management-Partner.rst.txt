@@ -1,0 +1,28 @@
+
+==================
+Management Partner
+==================
+
+
+*******************
+Management Packages
+*******************
+
+
+----------------------------
+azure-mgmt-managementpartner
+----------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-managementpartner"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-managementpartner', 'azure-mgmt-managementpartner')
+        </script>
+    </embed>
+
+------------
+

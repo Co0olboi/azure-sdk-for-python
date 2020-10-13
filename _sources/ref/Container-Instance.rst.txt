@@ -1,0 +1,28 @@
+
+==================
+Container Instance
+==================
+
+
+*******************
+Management Packages
+*******************
+
+
+----------------------------
+azure-mgmt-containerinstance
+----------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-containerinstance"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-containerinstance', 'azure-mgmt-containerinstance')
+        </script>
+    </embed>
+
+------------
+

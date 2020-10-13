@@ -1,0 +1,1277 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>&lt;no title&gt; &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/default_overrides.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/js/get_options.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+    
+    
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mgmt_quickstart.html">Quickstart Tutorial - Resource Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_mgmt_migration_guide.html">Migration Guide - Resource Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Services</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ref/API-Management.html">API Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Active-Directory.html">Active Directory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Advisor.html">Advisor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Alerts-Management.html">Alerts Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/App-Configuration.html">App Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/App-Service.html">App Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Application-Insights.html">Application Insights</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Attestation.html">Attestation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Authorization.html">Authorization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Automation.html">Automation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Batch.html">Batch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Billing.html">Billing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Bot-Service.html">Bot Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/CDN.html">CDN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services.html">Cognitive Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Anomaly-Detector.html">Cognitive Services Anomaly Detector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Knowledge-QnA-Maker.html">Cognitive Services Knowledge QnA Maker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Language-LUIS.html">Cognitive Services Language LUIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Language-Spellcheck.html">Cognitive Services Language Spellcheck</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Language-TextAnalytics.html">Cognitive Services Language TextAnalytics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Personalizer.html">Cognitive Services Personalizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Recognizer.html">Cognitive Services Recognizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-Autosuggest.html">Cognitive Services Search Autosuggest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-CustomImageSearch.html">Cognitive Services Search CustomImageSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-CustomSearch.html">Cognitive Services Search CustomSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-EntitySearch.html">Cognitive Services Search EntitySearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-ImageSearch.html">Cognitive Services Search ImageSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-NewsSearch.html">Cognitive Services Search NewsSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-VideoSearch.html">Cognitive Services Search VideoSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-VisualSearch.html">Cognitive Services Search VisualSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-WebSearch.html">Cognitive Services Search WebSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Vision-ComputerVision.html">Cognitive Services Vision ComputerVision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Vision-ContentModerator.html">Cognitive Services Vision ContentModerator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Vision-CustomVision.html">Cognitive Services Vision CustomVision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Vision-Face.html">Cognitive Services Vision Face</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Commerce.html">Commerce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Communication.html">Communication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Consumption.html">Consumption</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Container-Instance.html">Container Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Container-Registry.html">Container Registry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Container-Service.html">Container Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cosmos.html">Cosmos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cosmos-DB.html">Cosmos DB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cost-Management.html">Cost Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/DNS.html">DNS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Data-Bricks.html">Data Bricks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Data-Factory.html">Data Factory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Data-Lake-Analytics.html">Data Lake Analytics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Data-Lake-Store.html">Data Lake Store</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Data-Share.html">Data Share</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Data-migration.html">Data migration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Deployment-Manager.html">Deployment Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Dev-Test-Labs.html">Dev Test Labs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/DevSpaces.html">DevSpaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Edge-Gateway.html">Edge Gateway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Event-Grid.html">Event Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Event-Hub.html">Event Hub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Form-Recognizer.html">Form Recognizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Front-Door.html">Front Door</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/HDInsight.html">HDInsight</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Healthcare-APIs.html">Healthcare APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Hybrid-Cloud.html">Hybrid Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Identity.html">Identity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/ImageBuilder.html">ImageBuilder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/IoT.html">IoT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/IoT-Central.html">IoT Central</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Keyvault.html">Keyvault</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Kusto.html">Kusto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/LabServices.html">LabServices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Log-Analytics.html">Log Analytics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Logic-Apps.html">Logic Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/MSI.html">MSI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Machine-Learning-Compute.html">Machine Learning Compute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Managed-Services.html">Managed Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Management-Groups.html">Management Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Management-Partner.html">Management Partner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Maps.html">Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Market-Place-Ordering.html">Market Place Ordering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Media-Services.html">Media Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Metrics-Advisor.html">Metrics Advisor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Mixed-Reality.html">Mixed Reality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Monitoring.html">Monitoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/NetApp.html">NetApp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Network.html">Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Notification-Hubs.html">Notification Hubs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/OSS-RDBMS.html">OSS RDBMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Other.html">Other</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Peering.html">Peering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Policy-Insights.html">Policy Insights</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Power-BI-Embedded.html">Power BI Embedded</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Private-DNS.html">Private DNS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Recovery-Services.html">Recovery Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Recovery-Services-Backup.html">Recovery Services Backup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Redis-Cache.html">Redis Cache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Relay.html">Relay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Reservations.html">Reservations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Resource-Graph.html">Resource Graph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Resource-Management.html">Resource Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/SAP-Hana-on-Azure.html">SAP Hana on Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/SQL.html">SQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/SQL-Virtual-Machine.html">SQL Virtual Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Scheduler.html">Scheduler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Search.html">Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Search-Management.html">Search Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Security-Management.html">Security Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Serial-Console.html">Serial Console</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Server-Management.html">Server Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Service-Bus.html">Service Bus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Service-Fabric.html">Service Fabric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/SignalR-Management.html">SignalR Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Storage.html">Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Storage-Sync.html">Storage Sync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Subscription.html">Subscription</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Text-Analytics.html">Text Analytics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Traffic-Manager.html">Traffic Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/VMWare-by-CloudSimple.html">VMWare by CloudSimple</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Virtual-Machines.html">Virtual Machines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Web-Apps.html">Web Apps</a></li>
+</ul>
+
+            
+          
+
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>&lt;no title&gt;</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/toc_tree.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Services</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ref/API-Management.html">API Management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/API-Management.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/API-Management.html#azure-mgmt-apimanagement">azure-mgmt-apimanagement</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Active-Directory.html">Active Directory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Active-Directory.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Active-Directory.html#azure-graphrbac">azure-graphrbac</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Advisor.html">Advisor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Advisor.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Advisor.html#azure-mgmt-advisor">azure-mgmt-advisor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Alerts-Management.html">Alerts Management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Alerts-Management.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Alerts-Management.html#azure-mgmt-alertsmanagement">azure-mgmt-alertsmanagement</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/App-Configuration.html">App Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/App-Configuration.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/App-Configuration.html#azure-appconfiguration">azure-appconfiguration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref/App-Configuration.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/App-Configuration.html#azure-mgmt-appconfiguration">azure-mgmt-appconfiguration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/App-Service.html">App Service</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/App-Service.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/App-Service.html#azure-mgmt-appplatform">azure-mgmt-appplatform</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Application-Insights.html">Application Insights</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Application-Insights.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Application-Insights.html#azure-applicationinsights">azure-applicationinsights</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref/Application-Insights.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Application-Insights.html#azure-mgmt-applicationinsights">azure-mgmt-applicationinsights</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Attestation.html">Attestation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Attestation.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Attestation.html#azure-mgmt-attestation">azure-mgmt-attestation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Authorization.html">Authorization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Authorization.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Authorization.html#azure-mgmt-authorization">azure-mgmt-authorization</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Automation.html">Automation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Automation.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Automation.html#azure-mgmt-automation">azure-mgmt-automation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Batch.html">Batch</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Batch.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Batch.html#azure-batch">azure-batch</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref/Batch.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Batch.html#azure-mgmt-batch">azure-mgmt-batch</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Billing.html">Billing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Billing.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Billing.html#azure-mgmt-billing">azure-mgmt-billing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Bot-Service.html">Bot Service</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Bot-Service.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Bot-Service.html#azure-mgmt-botservice">azure-mgmt-botservice</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/CDN.html">CDN</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/CDN.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/CDN.html#azure-mgmt-cdn">azure-mgmt-cdn</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services.html">Cognitive Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Cognitive-Services.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Cognitive-Services.html#azure-mgmt-cognitiveservices">azure-mgmt-cognitiveservices</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Anomaly-Detector.html">Cognitive Services Anomaly Detector</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Cognitive-Services-Anomaly-Detector.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Cognitive-Services-Anomaly-Detector.html#azure-cognitiveservices-anomalydetector">azure-cognitiveservices-anomalydetector</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Knowledge-QnA-Maker.html">Cognitive Services Knowledge QnA Maker</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Cognitive-Services-Knowledge-QnA-Maker.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Cognitive-Services-Knowledge-QnA-Maker.html#azure-cognitiveservices-knowledge-qnamaker">azure-cognitiveservices-knowledge-qnamaker</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Language-LUIS.html">Cognitive Services Language LUIS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Cognitive-Services-Language-LUIS.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Cognitive-Services-Language-LUIS.html#azure-cognitiveservices-language-luis">azure-cognitiveservices-language-luis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Language-Spellcheck.html">Cognitive Services Language Spellcheck</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Cognitive-Services-Language-Spellcheck.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Cognitive-Services-Language-Spellcheck.html#azure-cognitiveservices-language-spellcheck">azure-cognitiveservices-language-spellcheck</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Language-TextAnalytics.html">Cognitive Services Language TextAnalytics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Cognitive-Services-Language-TextAnalytics.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Cognitive-Services-Language-TextAnalytics.html#azure-cognitiveservices-language-textanalytics">azure-cognitiveservices-language-textanalytics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Personalizer.html">Cognitive Services Personalizer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Cognitive-Services-Personalizer.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Cognitive-Services-Personalizer.html#azure-cognitiveservices-personalizer">azure-cognitiveservices-personalizer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Recognizer.html">Cognitive Services Recognizer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Cognitive-Services-Recognizer.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Cognitive-Services-Recognizer.html#azure-cognitiveservices-formrecognizer">azure-cognitiveservices-formrecognizer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-Autosuggest.html">Cognitive Services Search Autosuggest</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Cognitive-Services-Search-Autosuggest.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Cognitive-Services-Search-Autosuggest.html#azure-cognitiveservices-search-autosuggest">azure-cognitiveservices-search-autosuggest</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-CustomImageSearch.html">Cognitive Services Search CustomImageSearch</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Cognitive-Services-Search-CustomImageSearch.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Cognitive-Services-Search-CustomImageSearch.html#azure-cognitiveservices-search-customimagesearch">azure-cognitiveservices-search-customimagesearch</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-CustomSearch.html">Cognitive Services Search CustomSearch</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Cognitive-Services-Search-CustomSearch.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Cognitive-Services-Search-CustomSearch.html#azure-cognitiveservices-search-customsearch">azure-cognitiveservices-search-customsearch</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-EntitySearch.html">Cognitive Services Search EntitySearch</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Cognitive-Services-Search-EntitySearch.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Cognitive-Services-Search-EntitySearch.html#azure-cognitiveservices-search-entitysearch">azure-cognitiveservices-search-entitysearch</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-ImageSearch.html">Cognitive Services Search ImageSearch</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Cognitive-Services-Search-ImageSearch.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Cognitive-Services-Search-ImageSearch.html#azure-cognitiveservices-search-imagesearch">azure-cognitiveservices-search-imagesearch</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-NewsSearch.html">Cognitive Services Search NewsSearch</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Cognitive-Services-Search-NewsSearch.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Cognitive-Services-Search-NewsSearch.html#azure-cognitiveservices-search-newssearch">azure-cognitiveservices-search-newssearch</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-VideoSearch.html">Cognitive Services Search VideoSearch</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Cognitive-Services-Search-VideoSearch.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Cognitive-Services-Search-VideoSearch.html#azure-cognitiveservices-search-videosearch">azure-cognitiveservices-search-videosearch</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-VisualSearch.html">Cognitive Services Search VisualSearch</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Cognitive-Services-Search-VisualSearch.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Cognitive-Services-Search-VisualSearch.html#azure-cognitiveservices-search-visualsearch">azure-cognitiveservices-search-visualsearch</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-WebSearch.html">Cognitive Services Search WebSearch</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Cognitive-Services-Search-WebSearch.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Cognitive-Services-Search-WebSearch.html#azure-cognitiveservices-search-websearch">azure-cognitiveservices-search-websearch</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Vision-ComputerVision.html">Cognitive Services Vision ComputerVision</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Cognitive-Services-Vision-ComputerVision.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Cognitive-Services-Vision-ComputerVision.html#azure-cognitiveservices-vision-computervision">azure-cognitiveservices-vision-computervision</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Vision-ContentModerator.html">Cognitive Services Vision ContentModerator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Cognitive-Services-Vision-ContentModerator.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Cognitive-Services-Vision-ContentModerator.html#azure-cognitiveservices-vision-contentmoderator">azure-cognitiveservices-vision-contentmoderator</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Vision-CustomVision.html">Cognitive Services Vision CustomVision</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Cognitive-Services-Vision-CustomVision.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Cognitive-Services-Vision-CustomVision.html#azure-cognitiveservices-vision-customvision">azure-cognitiveservices-vision-customvision</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Vision-Face.html">Cognitive Services Vision Face</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Cognitive-Services-Vision-Face.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Cognitive-Services-Vision-Face.html#azure-cognitiveservices-vision-face">azure-cognitiveservices-vision-face</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Commerce.html">Commerce</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Commerce.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Commerce.html#azure-mgmt-commerce">azure-mgmt-commerce</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Communication.html">Communication</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Communication.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Communication.html#azure-communication-administration">azure-communication-administration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Communication.html#azure-communication-chat">azure-communication-chat</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Communication.html#azure-communication-sms">azure-communication-sms</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref/Communication.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Communication.html#azure-mgmt-communication">azure-mgmt-communication</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Consumption.html">Consumption</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Consumption.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Consumption.html#azure-mgmt-consumption">azure-mgmt-consumption</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Container-Instance.html">Container Instance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Container-Instance.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Container-Instance.html#azure-mgmt-containerinstance">azure-mgmt-containerinstance</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Container-Registry.html">Container Registry</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Container-Registry.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Container-Registry.html#azure-mgmt-containerregistry">azure-mgmt-containerregistry</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Container-Service.html">Container Service</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Container-Service.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Container-Service.html#azure-mgmt-containerservice">azure-mgmt-containerservice</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Core.html">Core</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Core.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Core.html#azure-core">azure-core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Core.html#azure-core-tracing-opencensus">azure-core-tracing-opencensus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Core.html#azure-core-tracing-opentelemetry">azure-core-tracing-opentelemetry</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cosmos.html">Cosmos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Cosmos.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Cosmos.html#azure-cosmos">azure-cosmos</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cosmos-DB.html">Cosmos DB</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Cosmos-DB.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Cosmos-DB.html#azure-mgmt-cosmosdb">azure-mgmt-cosmosdb</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cost-Management.html">Cost Management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Cost-Management.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Cost-Management.html#azure-mgmt-costmanagement">azure-mgmt-costmanagement</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/DNS.html">DNS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/DNS.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/DNS.html#azure-mgmt-dns">azure-mgmt-dns</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Data-Bricks.html">Data Bricks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Data-Bricks.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Data-Bricks.html#azure-mgmt-databricks">azure-mgmt-databricks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Data-Factory.html">Data Factory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Data-Factory.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Data-Factory.html#azure-mgmt-datafactory">azure-mgmt-datafactory</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Data-Lake-Analytics.html">Data Lake Analytics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Data-Lake-Analytics.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Data-Lake-Analytics.html#azure-mgmt-datalake-analytics">azure-mgmt-datalake-analytics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Data-Lake-Store.html">Data Lake Store</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Data-Lake-Store.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Data-Lake-Store.html#azure-mgmt-datalake-store">azure-mgmt-datalake-store</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Data-Share.html">Data Share</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Data-Share.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Data-Share.html#azure-mgmt-datashare">azure-mgmt-datashare</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Data-migration.html">Data migration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Data-migration.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Data-migration.html#azure-mgmt-datamigration">azure-mgmt-datamigration</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Deployment-Manager.html">Deployment Manager</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Deployment-Manager.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Deployment-Manager.html#azure-mgmt-deploymentmanager">azure-mgmt-deploymentmanager</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Dev-Test-Labs.html">Dev Test Labs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Dev-Test-Labs.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Dev-Test-Labs.html#azure-mgmt-devtestlabs">azure-mgmt-devtestlabs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/DevSpaces.html">DevSpaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/DevSpaces.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/DevSpaces.html#azure-mgmt-devspaces">azure-mgmt-devspaces</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Edge-Gateway.html">Edge Gateway</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Edge-Gateway.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Edge-Gateway.html#azure-mgmt-edgegateway">azure-mgmt-edgegateway</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Event-Grid.html">Event Grid</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Event-Grid.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Event-Grid.html#azure-eventgrid">azure-eventgrid</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref/Event-Grid.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Event-Grid.html#azure-mgmt-eventgrid">azure-mgmt-eventgrid</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Event-Hub.html">Event Hub</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Event-Hub.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Event-Hub.html#azure-eventhub">azure-eventhub</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Event-Hub.html#azure-eventhub-checkpointstoreblob-aio">azure-eventhub-checkpointstoreblob-aio</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref/Event-Hub.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Event-Hub.html#azure-mgmt-eventhub">azure-mgmt-eventhub</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Form-Recognizer.html">Form Recognizer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Form-Recognizer.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Form-Recognizer.html#azure-ai-formrecognizer">azure-ai-formrecognizer</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Front-Door.html">Front Door</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Front-Door.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Front-Door.html#azure-mgmt-frontdoor">azure-mgmt-frontdoor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/HDInsight.html">HDInsight</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/HDInsight.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/HDInsight.html#azure-mgmt-hdinsight">azure-mgmt-hdinsight</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Healthcare-APIs.html">Healthcare APIs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Healthcare-APIs.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Healthcare-APIs.html#azure-mgmt-healthcareapis">azure-mgmt-healthcareapis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Hybrid-Cloud.html">Hybrid Cloud</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Hybrid-Cloud.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Hybrid-Cloud.html#azure-mgmt-hybridcompute">azure-mgmt-hybridcompute</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Identity.html">Identity</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Identity.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Identity.html#azure-identity">azure-identity</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/ImageBuilder.html">ImageBuilder</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/ImageBuilder.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/ImageBuilder.html#azure-mgmt-imagebuilder">azure-mgmt-imagebuilder</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/IoT.html">IoT</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/IoT.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/IoT.html#azure-mgmt-iothub">azure-mgmt-iothub</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/IoT.html#azure-mgmt-iothubprovisioningservices">azure-mgmt-iothubprovisioningservices</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/IoT-Central.html">IoT Central</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/IoT-Central.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/IoT-Central.html#azure-mgmt-iotcentral">azure-mgmt-iotcentral</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Keyvault.html">Keyvault</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Keyvault.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Keyvault.html#azure-keyvault-certificates">azure-keyvault-certificates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Keyvault.html#azure-keyvault-keys">azure-keyvault-keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Keyvault.html#azure-keyvault-secrets">azure-keyvault-secrets</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref/Keyvault.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Keyvault.html#azure-mgmt-keyvault">azure-mgmt-keyvault</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Kusto.html">Kusto</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Kusto.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Kusto.html#azure-mgmt-kusto">azure-mgmt-kusto</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/LabServices.html">LabServices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/LabServices.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/LabServices.html#azure-mgmt-labservices">azure-mgmt-labservices</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Log-Analytics.html">Log Analytics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Log-Analytics.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Log-Analytics.html#azure-loganalytics">azure-loganalytics</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref/Log-Analytics.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Log-Analytics.html#azure-mgmt-loganalytics">azure-mgmt-loganalytics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Logic-Apps.html">Logic Apps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Logic-Apps.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Logic-Apps.html#azure-mgmt-logic">azure-mgmt-logic</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/MSI.html">MSI</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/MSI.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/MSI.html#azure-mgmt-msi">azure-mgmt-msi</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Machine-Learning-Compute.html">Machine Learning Compute</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Machine-Learning-Compute.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Machine-Learning-Compute.html#azure-mgmt-machinelearningcompute">azure-mgmt-machinelearningcompute</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Machine-Learning-Compute.html#azure-mgmt-machinelearningservices">azure-mgmt-machinelearningservices</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Managed-Services.html">Managed Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Managed-Services.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Managed-Services.html#azure-mgmt-managedservices">azure-mgmt-managedservices</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Management-Groups.html">Management Groups</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Management-Groups.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Management-Groups.html#azure-mgmt-managementgroups">azure-mgmt-managementgroups</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Management-Partner.html">Management Partner</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Management-Partner.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Management-Partner.html#azure-mgmt-managementpartner">azure-mgmt-managementpartner</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Maps.html">Maps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Maps.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Maps.html#azure-mgmt-maps">azure-mgmt-maps</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Market-Place-Ordering.html">Market Place Ordering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Market-Place-Ordering.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Market-Place-Ordering.html#azure-mgmt-marketplaceordering">azure-mgmt-marketplaceordering</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Media-Services.html">Media Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Media-Services.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Media-Services.html#azure-mgmt-media">azure-mgmt-media</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Metrics-Advisor.html">Metrics Advisor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Metrics-Advisor.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Metrics-Advisor.html#azure-ai-metricsadvisor">azure-ai-metricsadvisor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Mixed-Reality.html">Mixed Reality</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Mixed-Reality.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Mixed-Reality.html#azure-mgmt-mixedreality">azure-mgmt-mixedreality</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Monitoring.html">Monitoring</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Monitoring.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Monitoring.html#azure-mgmt-monitor">azure-mgmt-monitor</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/NetApp.html">NetApp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/NetApp.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/NetApp.html#azure-mgmt-netapp">azure-mgmt-netapp</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Network.html">Network</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Network.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Network.html#azure-mgmt-network">azure-mgmt-network</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Notification-Hubs.html">Notification Hubs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Notification-Hubs.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Notification-Hubs.html#azure-mgmt-notificationhubs">azure-mgmt-notificationhubs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/OSS-RDBMS.html">OSS RDBMS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/OSS-RDBMS.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/OSS-RDBMS.html#azure-mgmt-rdbms">azure-mgmt-rdbms</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Other.html">Other</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Other.html#other-packages">Other Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-ai-anomalydetector">azure-ai-anomalydetector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-common">azure-common</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-data-tables">azure-data-tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-eventhub-checkpointstoreblob">azure-eventhub-checkpointstoreblob</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-keyvault-administration">azure-keyvault-administration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-mgmt-automanage">azure-mgmt-automanage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-mgmt-azurestack">azure-mgmt-azurestack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-mgmt-baremetalinfrastructure">azure-mgmt-baremetalinfrastructure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-mgmt-core">azure-mgmt-core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-mgmt-customproviders">azure-mgmt-customproviders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-mgmt-databox">azure-mgmt-databox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-mgmt-databoxedge">azure-mgmt-databoxedge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-mgmt-digitaltwins">azure-mgmt-digitaltwins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-mgmt-hybridkubernetes">azure-mgmt-hybridkubernetes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-mgmt-kubernetesconfiguration">azure-mgmt-kubernetesconfiguration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-mgmt-maintenance">azure-mgmt-maintenance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-mgmt-operationsmanagement">azure-mgmt-operationsmanagement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-mgmt-powerbidedicated">azure-mgmt-powerbidedicated</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-mgmt-redhatopenshift">azure-mgmt-redhatopenshift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-mgmt-regionmove">azure-mgmt-regionmove</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-mgmt-resourcemover">azure-mgmt-resourcemover</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-mgmt-storageimportexport">azure-mgmt-storageimportexport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-mgmt-streamanalytics">azure-mgmt-streamanalytics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-mgmt-support">azure-mgmt-support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-mgmt-synapse">azure-mgmt-synapse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-mgmt-timeseriesinsights">azure-mgmt-timeseriesinsights</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-schemaregistry">azure-schemaregistry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-schemaregistry-avroserializer">azure-schemaregistry-avroserializer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-storage">azure-storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-synapse">azure-synapse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-synapse-accesscontrol">azure-synapse-accesscontrol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-synapse-artifacts">azure-synapse-artifacts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-synapse-spark">azure-synapse-spark</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Other.html#azure-template">azure-template</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Peering.html">Peering</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Peering.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Peering.html#azure-mgmt-peering">azure-mgmt-peering</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Policy-Insights.html">Policy Insights</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Policy-Insights.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Policy-Insights.html#azure-mgmt-policyinsights">azure-mgmt-policyinsights</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Power-BI-Embedded.html">Power BI Embedded</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Power-BI-Embedded.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Power-BI-Embedded.html#azure-mgmt-powerbiembedded">azure-mgmt-powerbiembedded</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Private-DNS.html">Private DNS</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Private-DNS.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Private-DNS.html#azure-mgmt-privatedns">azure-mgmt-privatedns</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Recovery-Services.html">Recovery Services</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Recovery-Services.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Recovery-Services.html#azure-mgmt-recoveryservices">azure-mgmt-recoveryservices</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Recovery-Services-Backup.html">Recovery Services Backup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Recovery-Services-Backup.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Recovery-Services-Backup.html#azure-mgmt-recoveryservicesbackup">azure-mgmt-recoveryservicesbackup</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Redis-Cache.html">Redis Cache</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Redis-Cache.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Redis-Cache.html#azure-mgmt-redis">azure-mgmt-redis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Relay.html">Relay</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Relay.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Relay.html#azure-mgmt-relay">azure-mgmt-relay</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Reservations.html">Reservations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Reservations.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Reservations.html#azure-mgmt-reservations">azure-mgmt-reservations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Resource-Graph.html">Resource Graph</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Resource-Graph.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Resource-Graph.html#azure-mgmt-resourcegraph">azure-mgmt-resourcegraph</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Resource-Management.html">Resource Management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Resource-Management.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Resource-Management.html#azure-mgmt-resource">azure-mgmt-resource</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/SAP-Hana-on-Azure.html">SAP Hana on Azure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/SAP-Hana-on-Azure.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/SAP-Hana-on-Azure.html#azure-mgmt-hanaonazure">azure-mgmt-hanaonazure</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/SQL.html">SQL</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/SQL.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/SQL.html#azure-mgmt-sql">azure-mgmt-sql</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/SQL-Virtual-Machine.html">SQL Virtual Machine</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/SQL-Virtual-Machine.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/SQL-Virtual-Machine.html#azure-mgmt-sqlvirtualmachine">azure-mgmt-sqlvirtualmachine</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Scheduler.html">Scheduler</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Scheduler.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Scheduler.html#azure-mgmt-scheduler">azure-mgmt-scheduler</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Search.html">Search</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Search.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Search.html#azure-search">azure-search</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Search.html#azure-search-documents">azure-search-documents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Search-Management.html">Search Management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Search-Management.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Search-Management.html#azure-mgmt-search">azure-mgmt-search</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Security-Management.html">Security Management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Security-Management.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Security-Management.html#azure-mgmt-security">azure-mgmt-security</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Serial-Console.html">Serial Console</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Serial-Console.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Serial-Console.html#azure-mgmt-serialconsole">azure-mgmt-serialconsole</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Server-Management.html">Server Management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Server-Management.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Server-Management.html#azure-mgmt-servermanager">azure-mgmt-servermanager</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Service-Bus.html">Service Bus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Service-Bus.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Service-Bus.html#azure-servicebus">azure-servicebus</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref/Service-Bus.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Service-Bus.html#azure-mgmt-servicebus">azure-mgmt-servicebus</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Service-Fabric.html">Service Fabric</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Service-Fabric.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Service-Fabric.html#azure-servicefabric">azure-servicefabric</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref/Service-Fabric.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Service-Fabric.html#azure-mgmt-servicefabric">azure-mgmt-servicefabric</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/SignalR-Management.html">SignalR Management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/SignalR-Management.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/SignalR-Management.html#azure-mgmt-signalr">azure-mgmt-signalr</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Storage.html">Storage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Storage.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Storage.html#azure-storage-blob">azure-storage-blob</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Storage.html#azure-storage-blob-changefeed">azure-storage-blob-changefeed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Storage.html#azure-storage-file-datalake">azure-storage-file-datalake</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Storage.html#azure-storage-file-share">azure-storage-file-share</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Storage.html#azure-storage-queue">azure-storage-queue</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ref/Storage.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Storage.html#azure-mgmt-storage">azure-mgmt-storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ref/Storage.html#azure-mgmt-storagecache">azure-mgmt-storagecache</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Storage-Sync.html">Storage Sync</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Storage-Sync.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Storage-Sync.html#azure-mgmt-storagesync">azure-mgmt-storagesync</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Subscription.html">Subscription</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Subscription.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Subscription.html#azure-mgmt-subscription">azure-mgmt-subscription</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Text-Analytics.html">Text Analytics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Text-Analytics.html#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Text-Analytics.html#azure-ai-textanalytics">azure-ai-textanalytics</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Traffic-Manager.html">Traffic Manager</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Traffic-Manager.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Traffic-Manager.html#azure-mgmt-trafficmanager">azure-mgmt-trafficmanager</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/VMWare-by-CloudSimple.html">VMWare by CloudSimple</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/VMWare-by-CloudSimple.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/VMWare-by-CloudSimple.html#azure-mgmt-vmwarecloudsimple">azure-mgmt-vmwarecloudsimple</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Virtual-Machines.html">Virtual Machines</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Virtual-Machines.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Virtual-Machines.html#azure-mgmt-compute">azure-mgmt-compute</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Web-Apps.html">Web Apps</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ref/Web-Apps.html#management-packages">Management Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="ref/Web-Apps.html#azure-mgmt-web">azure-mgmt-web</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, Microsoft
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+
+==========
+Logic Apps
+==========
+
+
+*******************
+Management Packages
+*******************
+
+
+----------------
+azure-mgmt-logic
+----------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-logic"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-logic', 'azure-mgmt-logic')
+        </script>
+    </embed>
+
+------------
+

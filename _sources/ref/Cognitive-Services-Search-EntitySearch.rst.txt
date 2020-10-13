@@ -1,0 +1,28 @@
+
+======================================
+Cognitive Services Search EntitySearch
+======================================
+
+
+***************
+Client Packages
+***************
+
+
+-------------------------------------------
+azure-cognitiveservices-search-entitysearch
+-------------------------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-cognitiveservices-search-entitysearch"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-cognitiveservices-search-entitysearch', 'azure-cognitiveservices-search-entitysearch')
+        </script>
+    </embed>
+
+------------
+

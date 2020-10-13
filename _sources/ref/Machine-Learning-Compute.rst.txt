@@ -1,0 +1,46 @@
+
+========================
+Machine Learning Compute
+========================
+
+
+*******************
+Management Packages
+*******************
+
+
+---------------------------------
+azure-mgmt-machinelearningcompute
+---------------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-machinelearningcompute"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-machinelearningcompute', 'azure-mgmt-machinelearningcompute')
+        </script>
+    </embed>
+
+------------
+
+
+----------------------------------
+azure-mgmt-machinelearningservices
+----------------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-machinelearningservices"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-machinelearningservices', 'azure-mgmt-machinelearningservices')
+        </script>
+    </embed>
+
+------------
+

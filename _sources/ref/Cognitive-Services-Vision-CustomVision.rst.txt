@@ -1,0 +1,28 @@
+
+======================================
+Cognitive Services Vision CustomVision
+======================================
+
+
+***************
+Client Packages
+***************
+
+
+-------------------------------------------
+azure-cognitiveservices-vision-customvision
+-------------------------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-cognitiveservices-vision-customvision"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-cognitiveservices-vision-customvision', 'azure-cognitiveservices-vision-customvision')
+        </script>
+    </embed>
+
+------------
+

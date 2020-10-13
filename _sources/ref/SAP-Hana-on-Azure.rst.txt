@@ -1,0 +1,28 @@
+
+=================
+SAP Hana on Azure
+=================
+
+
+*******************
+Management Packages
+*******************
+
+
+----------------------
+azure-mgmt-hanaonazure
+----------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-hanaonazure"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-hanaonazure', 'azure-mgmt-hanaonazure')
+        </script>
+    </embed>
+
+------------
+

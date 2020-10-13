@@ -1,0 +1,28 @@
+
+===================
+Resource Management
+===================
+
+
+*******************
+Management Packages
+*******************
+
+
+-------------------
+azure-mgmt-resource
+-------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-resource"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-resource', 'azure-mgmt-resource')
+        </script>
+    </embed>
+
+------------
+

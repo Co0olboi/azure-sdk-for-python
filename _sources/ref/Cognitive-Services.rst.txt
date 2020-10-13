@@ -1,0 +1,28 @@
+
+==================
+Cognitive Services
+==================
+
+
+*******************
+Management Packages
+*******************
+
+
+----------------------------
+azure-mgmt-cognitiveservices
+----------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-cognitiveservices"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-cognitiveservices', 'azure-mgmt-cognitiveservices')
+        </script>
+    </embed>
+
+------------
+

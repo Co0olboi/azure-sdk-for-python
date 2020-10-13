@@ -1,0 +1,28 @@
+
+=================
+Server Management
+=================
+
+
+*******************
+Management Packages
+*******************
+
+
+------------------------
+azure-mgmt-servermanager
+------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-servermanager"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-servermanager', 'azure-mgmt-servermanager')
+        </script>
+    </embed>
+
+------------
+

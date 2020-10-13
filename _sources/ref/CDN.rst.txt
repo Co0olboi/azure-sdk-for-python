@@ -1,0 +1,28 @@
+
+===
+CDN
+===
+
+
+*******************
+Management Packages
+*******************
+
+
+--------------
+azure-mgmt-cdn
+--------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-cdn"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-cdn', 'azure-mgmt-cdn')
+        </script>
+    </embed>
+
+------------
+

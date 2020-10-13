@@ -1,0 +1,743 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Other &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/default_overrides.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/js/get_options.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Peering" href="Peering.html" />
+    <link rel="prev" title="OSS RDBMS" href="OSS-RDBMS.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+    
+    
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mgmt_quickstart.html">Quickstart Tutorial - Resource Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_mgmt_migration_guide.html">Migration Guide - Resource Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Services</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="API-Management.html">API Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Active-Directory.html">Active Directory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Advisor.html">Advisor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Alerts-Management.html">Alerts Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="App-Configuration.html">App Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="App-Service.html">App Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Application-Insights.html">Application Insights</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Attestation.html">Attestation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Authorization.html">Authorization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Automation.html">Automation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Batch.html">Batch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Billing.html">Billing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Bot-Service.html">Bot Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CDN.html">CDN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services.html">Cognitive Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Anomaly-Detector.html">Cognitive Services Anomaly Detector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Knowledge-QnA-Maker.html">Cognitive Services Knowledge QnA Maker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Language-LUIS.html">Cognitive Services Language LUIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Language-Spellcheck.html">Cognitive Services Language Spellcheck</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Language-TextAnalytics.html">Cognitive Services Language TextAnalytics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Personalizer.html">Cognitive Services Personalizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Recognizer.html">Cognitive Services Recognizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Search-Autosuggest.html">Cognitive Services Search Autosuggest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Search-CustomImageSearch.html">Cognitive Services Search CustomImageSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Search-CustomSearch.html">Cognitive Services Search CustomSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Search-EntitySearch.html">Cognitive Services Search EntitySearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Search-ImageSearch.html">Cognitive Services Search ImageSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Search-NewsSearch.html">Cognitive Services Search NewsSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Search-VideoSearch.html">Cognitive Services Search VideoSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Search-VisualSearch.html">Cognitive Services Search VisualSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Search-WebSearch.html">Cognitive Services Search WebSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Vision-ComputerVision.html">Cognitive Services Vision ComputerVision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Vision-ContentModerator.html">Cognitive Services Vision ContentModerator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Vision-CustomVision.html">Cognitive Services Vision CustomVision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Vision-Face.html">Cognitive Services Vision Face</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Commerce.html">Commerce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Communication.html">Communication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Consumption.html">Consumption</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Container-Instance.html">Container Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Container-Registry.html">Container Registry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Container-Service.html">Container Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cosmos.html">Cosmos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cosmos-DB.html">Cosmos DB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cost-Management.html">Cost Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DNS.html">DNS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data-Bricks.html">Data Bricks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data-Factory.html">Data Factory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data-Lake-Analytics.html">Data Lake Analytics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data-Lake-Store.html">Data Lake Store</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data-Share.html">Data Share</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data-migration.html">Data migration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Deployment-Manager.html">Deployment Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Dev-Test-Labs.html">Dev Test Labs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DevSpaces.html">DevSpaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Edge-Gateway.html">Edge Gateway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Event-Grid.html">Event Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Event-Hub.html">Event Hub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Form-Recognizer.html">Form Recognizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Front-Door.html">Front Door</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HDInsight.html">HDInsight</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Healthcare-APIs.html">Healthcare APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Hybrid-Cloud.html">Hybrid Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Identity.html">Identity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ImageBuilder.html">ImageBuilder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IoT.html">IoT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IoT-Central.html">IoT Central</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Keyvault.html">Keyvault</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Kusto.html">Kusto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LabServices.html">LabServices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Log-Analytics.html">Log Analytics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Logic-Apps.html">Logic Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MSI.html">MSI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Machine-Learning-Compute.html">Machine Learning Compute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Managed-Services.html">Managed Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Management-Groups.html">Management Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Management-Partner.html">Management Partner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Maps.html">Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Market-Place-Ordering.html">Market Place Ordering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Media-Services.html">Media Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Metrics-Advisor.html">Metrics Advisor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mixed-Reality.html">Mixed Reality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Monitoring.html">Monitoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NetApp.html">NetApp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Network.html">Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Notification-Hubs.html">Notification Hubs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OSS-RDBMS.html">OSS RDBMS</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Other</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#other-packages">Other Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#azure-ai-anomalydetector">azure-ai-anomalydetector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-common">azure-common</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-data-tables">azure-data-tables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-eventhub-checkpointstoreblob">azure-eventhub-checkpointstoreblob</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-keyvault-administration">azure-keyvault-administration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-mgmt-automanage">azure-mgmt-automanage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-mgmt-azurestack">azure-mgmt-azurestack</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-mgmt-baremetalinfrastructure">azure-mgmt-baremetalinfrastructure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-mgmt-core">azure-mgmt-core</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-mgmt-customproviders">azure-mgmt-customproviders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-mgmt-databox">azure-mgmt-databox</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-mgmt-databoxedge">azure-mgmt-databoxedge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-mgmt-digitaltwins">azure-mgmt-digitaltwins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-mgmt-hybridkubernetes">azure-mgmt-hybridkubernetes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-mgmt-kubernetesconfiguration">azure-mgmt-kubernetesconfiguration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-mgmt-maintenance">azure-mgmt-maintenance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-mgmt-operationsmanagement">azure-mgmt-operationsmanagement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-mgmt-powerbidedicated">azure-mgmt-powerbidedicated</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-mgmt-redhatopenshift">azure-mgmt-redhatopenshift</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-mgmt-regionmove">azure-mgmt-regionmove</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-mgmt-resourcemover">azure-mgmt-resourcemover</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-mgmt-storageimportexport">azure-mgmt-storageimportexport</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-mgmt-streamanalytics">azure-mgmt-streamanalytics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-mgmt-support">azure-mgmt-support</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-mgmt-synapse">azure-mgmt-synapse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-mgmt-timeseriesinsights">azure-mgmt-timeseriesinsights</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-schemaregistry">azure-schemaregistry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-schemaregistry-avroserializer">azure-schemaregistry-avroserializer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-storage">azure-storage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-synapse">azure-synapse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-synapse-accesscontrol">azure-synapse-accesscontrol</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-synapse-artifacts">azure-synapse-artifacts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-synapse-spark">azure-synapse-spark</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-template">azure-template</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Peering.html">Peering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Policy-Insights.html">Policy Insights</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Power-BI-Embedded.html">Power BI Embedded</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Private-DNS.html">Private DNS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Recovery-Services.html">Recovery Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Recovery-Services-Backup.html">Recovery Services Backup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Redis-Cache.html">Redis Cache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Relay.html">Relay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reservations.html">Reservations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Resource-Graph.html">Resource Graph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Resource-Management.html">Resource Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SAP-Hana-on-Azure.html">SAP Hana on Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SQL.html">SQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SQL-Virtual-Machine.html">SQL Virtual Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Scheduler.html">Scheduler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Search.html">Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Search-Management.html">Search Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Security-Management.html">Security Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Serial-Console.html">Serial Console</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Server-Management.html">Server Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Service-Bus.html">Service Bus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Service-Fabric.html">Service Fabric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SignalR-Management.html">SignalR Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Storage.html">Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Storage-Sync.html">Storage Sync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Subscription.html">Subscription</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Text-Analytics.html">Text Analytics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Traffic-Manager.html">Traffic Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VMWare-by-CloudSimple.html">VMWare by CloudSimple</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Virtual-Machines.html">Virtual Machines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Web-Apps.html">Web Apps</a></li>
+</ul>
+
+            
+          
+
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Other</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ref/Other.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="other">
+<h1>Other<a class="headerlink" href="#other" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="other-packages">
+<h2>Other Packages<a class="headerlink" href="#other-packages" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="azure-ai-anomalydetector">
+<h3>azure-ai-anomalydetector<a class="headerlink" href="#azure-ai-anomalydetector" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-ai-anomalydetector"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-ai-anomalydetector', 'azure-ai-anomalydetector')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-common">
+<h3>azure-common<a class="headerlink" href="#azure-common" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-common"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-common', 'azure-common')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-data-tables">
+<h3>azure-data-tables<a class="headerlink" href="#azure-data-tables" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-data-tables"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-data-tables', 'azure-data-tables')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-eventhub-checkpointstoreblob">
+<h3>azure-eventhub-checkpointstoreblob<a class="headerlink" href="#azure-eventhub-checkpointstoreblob" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-eventhub-checkpointstoreblob"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-eventhub-checkpointstoreblob', 'azure-eventhub-checkpointstoreblob')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-keyvault-administration">
+<h3>azure-keyvault-administration<a class="headerlink" href="#azure-keyvault-administration" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-keyvault-administration"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-keyvault-administration', 'azure-keyvault-administration')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-mgmt-automanage">
+<h3>azure-mgmt-automanage<a class="headerlink" href="#azure-mgmt-automanage" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-mgmt-automanage"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-mgmt-automanage', 'azure-mgmt-automanage')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-mgmt-azurestack">
+<h3>azure-mgmt-azurestack<a class="headerlink" href="#azure-mgmt-azurestack" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-mgmt-azurestack"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-mgmt-azurestack', 'azure-mgmt-azurestack')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-mgmt-baremetalinfrastructure">
+<h3>azure-mgmt-baremetalinfrastructure<a class="headerlink" href="#azure-mgmt-baremetalinfrastructure" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-mgmt-baremetalinfrastructure"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-mgmt-baremetalinfrastructure', 'azure-mgmt-baremetalinfrastructure')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-mgmt-core">
+<h3>azure-mgmt-core<a class="headerlink" href="#azure-mgmt-core" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-mgmt-core"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-mgmt-core', 'azure-mgmt-core')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-mgmt-customproviders">
+<h3>azure-mgmt-customproviders<a class="headerlink" href="#azure-mgmt-customproviders" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-mgmt-customproviders"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-mgmt-customproviders', 'azure-mgmt-customproviders')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-mgmt-databox">
+<h3>azure-mgmt-databox<a class="headerlink" href="#azure-mgmt-databox" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-mgmt-databox"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-mgmt-databox', 'azure-mgmt-databox')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-mgmt-databoxedge">
+<h3>azure-mgmt-databoxedge<a class="headerlink" href="#azure-mgmt-databoxedge" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-mgmt-databoxedge"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-mgmt-databoxedge', 'azure-mgmt-databoxedge')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-mgmt-digitaltwins">
+<h3>azure-mgmt-digitaltwins<a class="headerlink" href="#azure-mgmt-digitaltwins" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-mgmt-digitaltwins"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-mgmt-digitaltwins', 'azure-mgmt-digitaltwins')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-mgmt-hybridkubernetes">
+<h3>azure-mgmt-hybridkubernetes<a class="headerlink" href="#azure-mgmt-hybridkubernetes" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-mgmt-hybridkubernetes"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-mgmt-hybridkubernetes', 'azure-mgmt-hybridkubernetes')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-mgmt-kubernetesconfiguration">
+<h3>azure-mgmt-kubernetesconfiguration<a class="headerlink" href="#azure-mgmt-kubernetesconfiguration" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-mgmt-kubernetesconfiguration"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-mgmt-kubernetesconfiguration', 'azure-mgmt-kubernetesconfiguration')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-mgmt-maintenance">
+<h3>azure-mgmt-maintenance<a class="headerlink" href="#azure-mgmt-maintenance" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-mgmt-maintenance"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-mgmt-maintenance', 'azure-mgmt-maintenance')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-mgmt-operationsmanagement">
+<h3>azure-mgmt-operationsmanagement<a class="headerlink" href="#azure-mgmt-operationsmanagement" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-mgmt-operationsmanagement"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-mgmt-operationsmanagement', 'azure-mgmt-operationsmanagement')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-mgmt-powerbidedicated">
+<h3>azure-mgmt-powerbidedicated<a class="headerlink" href="#azure-mgmt-powerbidedicated" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-mgmt-powerbidedicated"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-mgmt-powerbidedicated', 'azure-mgmt-powerbidedicated')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-mgmt-redhatopenshift">
+<h3>azure-mgmt-redhatopenshift<a class="headerlink" href="#azure-mgmt-redhatopenshift" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-mgmt-redhatopenshift"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-mgmt-redhatopenshift', 'azure-mgmt-redhatopenshift')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-mgmt-regionmove">
+<h3>azure-mgmt-regionmove<a class="headerlink" href="#azure-mgmt-regionmove" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-mgmt-regionmove"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-mgmt-regionmove', 'azure-mgmt-regionmove')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-mgmt-resourcemover">
+<h3>azure-mgmt-resourcemover<a class="headerlink" href="#azure-mgmt-resourcemover" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-mgmt-resourcemover"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-mgmt-resourcemover', 'azure-mgmt-resourcemover')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-mgmt-storageimportexport">
+<h3>azure-mgmt-storageimportexport<a class="headerlink" href="#azure-mgmt-storageimportexport" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-mgmt-storageimportexport"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-mgmt-storageimportexport', 'azure-mgmt-storageimportexport')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-mgmt-streamanalytics">
+<h3>azure-mgmt-streamanalytics<a class="headerlink" href="#azure-mgmt-streamanalytics" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-mgmt-streamanalytics"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-mgmt-streamanalytics', 'azure-mgmt-streamanalytics')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-mgmt-support">
+<h3>azure-mgmt-support<a class="headerlink" href="#azure-mgmt-support" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-mgmt-support"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-mgmt-support', 'azure-mgmt-support')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-mgmt-synapse">
+<h3>azure-mgmt-synapse<a class="headerlink" href="#azure-mgmt-synapse" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-mgmt-synapse"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-mgmt-synapse', 'azure-mgmt-synapse')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-mgmt-timeseriesinsights">
+<h3>azure-mgmt-timeseriesinsights<a class="headerlink" href="#azure-mgmt-timeseriesinsights" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-mgmt-timeseriesinsights"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-mgmt-timeseriesinsights', 'azure-mgmt-timeseriesinsights')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-schemaregistry">
+<h3>azure-schemaregistry<a class="headerlink" href="#azure-schemaregistry" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-schemaregistry"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-schemaregistry', 'azure-schemaregistry')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-schemaregistry-avroserializer">
+<h3>azure-schemaregistry-avroserializer<a class="headerlink" href="#azure-schemaregistry-avroserializer" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-schemaregistry-avroserializer"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-schemaregistry-avroserializer', 'azure-schemaregistry-avroserializer')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-storage">
+<h3>azure-storage<a class="headerlink" href="#azure-storage" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-storage"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-storage', 'azure-storage')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-synapse">
+<h3>azure-synapse<a class="headerlink" href="#azure-synapse" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-synapse"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-synapse', 'azure-synapse')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-synapse-accesscontrol">
+<h3>azure-synapse-accesscontrol<a class="headerlink" href="#azure-synapse-accesscontrol" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-synapse-accesscontrol"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-synapse-accesscontrol', 'azure-synapse-accesscontrol')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-synapse-artifacts">
+<h3>azure-synapse-artifacts<a class="headerlink" href="#azure-synapse-artifacts" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-synapse-artifacts"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-synapse-artifacts', 'azure-synapse-artifacts')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-synapse-spark">
+<h3>azure-synapse-spark<a class="headerlink" href="#azure-synapse-spark" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-synapse-spark"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-synapse-spark', 'azure-synapse-spark')
+    </script>
+</embed></div>
+<hr class="docutils" />
+<div class="section" id="azure-template">
+<h3>azure-template<a class="headerlink" href="#azure-template" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-template"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-template', 'azure-template')
+    </script>
+</embed><hr class="docutils" />
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Peering.html" class="btn btn-neutral float-right" title="Peering" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="OSS-RDBMS.html" class="btn btn-neutral float-left" title="OSS RDBMS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, Microsoft
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

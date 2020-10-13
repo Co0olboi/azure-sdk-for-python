@@ -1,0 +1,28 @@
+
+===========
+IoT Central
+===========
+
+
+*******************
+Management Packages
+*******************
+
+
+---------------------
+azure-mgmt-iotcentral
+---------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-iotcentral"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-iotcentral', 'azure-mgmt-iotcentral')
+        </script>
+    </embed>
+
+------------
+

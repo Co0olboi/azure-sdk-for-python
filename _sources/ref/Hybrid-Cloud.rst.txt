@@ -1,0 +1,28 @@
+
+============
+Hybrid Cloud
+============
+
+
+*******************
+Management Packages
+*******************
+
+
+------------------------
+azure-mgmt-hybridcompute
+------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-hybridcompute"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-hybridcompute', 'azure-mgmt-hybridcompute')
+        </script>
+    </embed>
+
+------------
+

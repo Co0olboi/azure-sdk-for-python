@@ -1,0 +1,141 @@
+
+=======
+Storage
+=======
+
+
+***************
+Client Packages
+***************
+
+
+------------------
+azure-storage-blob
+------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-storage-blob"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-storage-blob', 'azure-storage-blob')
+        </script>
+    </embed>
+
+------------
+
+
+-----------------------------
+azure-storage-blob-changefeed
+-----------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-storage-blob-changefeed"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-storage-blob-changefeed', 'azure-storage-blob-changefeed')
+        </script>
+    </embed>
+
+------------
+
+
+---------------------------
+azure-storage-file-datalake
+---------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-storage-file-datalake"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-storage-file-datalake', 'azure-storage-file-datalake')
+        </script>
+    </embed>
+
+------------
+
+
+------------------------
+azure-storage-file-share
+------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-storage-file-share"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-storage-file-share', 'azure-storage-file-share')
+        </script>
+    </embed>
+
+------------
+
+
+-------------------
+azure-storage-queue
+-------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-storage-queue"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-storage-queue', 'azure-storage-queue')
+        </script>
+    </embed>
+
+------------
+
+
+*******************
+Management Packages
+*******************
+
+
+------------------
+azure-mgmt-storage
+------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-storage"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-storage', 'azure-mgmt-storage')
+        </script>
+    </embed>
+
+------------
+
+
+-----------------------
+azure-mgmt-storagecache
+-----------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-storagecache"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-storagecache', 'azure-mgmt-storagecache')
+        </script>
+    </embed>
+
+------------
+

@@ -1,0 +1,28 @@
+
+==============================
+Cognitive Services Vision Face
+==============================
+
+
+***************
+Client Packages
+***************
+
+
+-----------------------------------
+azure-cognitiveservices-vision-face
+-----------------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-cognitiveservices-vision-face"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-cognitiveservices-vision-face', 'azure-cognitiveservices-vision-face')
+        </script>
+    </embed>
+
+------------
+

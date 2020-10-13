@@ -1,0 +1,28 @@
+
+=====================
+VMWare by CloudSimple
+=====================
+
+
+*******************
+Management Packages
+*******************
+
+
+----------------------------
+azure-mgmt-vmwarecloudsimple
+----------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-vmwarecloudsimple"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-vmwarecloudsimple', 'azure-mgmt-vmwarecloudsimple')
+        </script>
+    </embed>
+
+------------
+

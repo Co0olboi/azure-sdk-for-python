@@ -1,0 +1,380 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Cognitive Services Vision ComputerVision &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/default_overrides.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/js/get_options.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Cognitive Services Vision ContentModerator" href="Cognitive-Services-Vision-ContentModerator.html" />
+    <link rel="prev" title="Cognitive Services Search WebSearch" href="Cognitive-Services-Search-WebSearch.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+    
+    
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mgmt_quickstart.html">Quickstart Tutorial - Resource Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../python_mgmt_migration_guide.html">Migration Guide - Resource Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Services</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="API-Management.html">API Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Active-Directory.html">Active Directory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Advisor.html">Advisor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Alerts-Management.html">Alerts Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="App-Configuration.html">App Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="App-Service.html">App Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Application-Insights.html">Application Insights</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Attestation.html">Attestation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Authorization.html">Authorization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Automation.html">Automation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Batch.html">Batch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Billing.html">Billing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Bot-Service.html">Bot Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CDN.html">CDN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services.html">Cognitive Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Anomaly-Detector.html">Cognitive Services Anomaly Detector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Knowledge-QnA-Maker.html">Cognitive Services Knowledge QnA Maker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Language-LUIS.html">Cognitive Services Language LUIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Language-Spellcheck.html">Cognitive Services Language Spellcheck</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Language-TextAnalytics.html">Cognitive Services Language TextAnalytics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Personalizer.html">Cognitive Services Personalizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Recognizer.html">Cognitive Services Recognizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Search-Autosuggest.html">Cognitive Services Search Autosuggest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Search-CustomImageSearch.html">Cognitive Services Search CustomImageSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Search-CustomSearch.html">Cognitive Services Search CustomSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Search-EntitySearch.html">Cognitive Services Search EntitySearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Search-ImageSearch.html">Cognitive Services Search ImageSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Search-NewsSearch.html">Cognitive Services Search NewsSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Search-VideoSearch.html">Cognitive Services Search VideoSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Search-VisualSearch.html">Cognitive Services Search VisualSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Search-WebSearch.html">Cognitive Services Search WebSearch</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Cognitive Services Vision ComputerVision</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#client-packages">Client Packages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#azure-cognitiveservices-vision-computervision">azure-cognitiveservices-vision-computervision</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Vision-ContentModerator.html">Cognitive Services Vision ContentModerator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Vision-CustomVision.html">Cognitive Services Vision CustomVision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cognitive-Services-Vision-Face.html">Cognitive Services Vision Face</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Commerce.html">Commerce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Communication.html">Communication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Consumption.html">Consumption</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Container-Instance.html">Container Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Container-Registry.html">Container Registry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Container-Service.html">Container Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cosmos.html">Cosmos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cosmos-DB.html">Cosmos DB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Cost-Management.html">Cost Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DNS.html">DNS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data-Bricks.html">Data Bricks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data-Factory.html">Data Factory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data-Lake-Analytics.html">Data Lake Analytics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data-Lake-Store.html">Data Lake Store</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data-Share.html">Data Share</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Data-migration.html">Data migration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Deployment-Manager.html">Deployment Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Dev-Test-Labs.html">Dev Test Labs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="DevSpaces.html">DevSpaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Edge-Gateway.html">Edge Gateway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Event-Grid.html">Event Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Event-Hub.html">Event Hub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Form-Recognizer.html">Form Recognizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Front-Door.html">Front Door</a></li>
+<li class="toctree-l1"><a class="reference internal" href="HDInsight.html">HDInsight</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Healthcare-APIs.html">Healthcare APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Hybrid-Cloud.html">Hybrid Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Identity.html">Identity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ImageBuilder.html">ImageBuilder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IoT.html">IoT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="IoT-Central.html">IoT Central</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Keyvault.html">Keyvault</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Kusto.html">Kusto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="LabServices.html">LabServices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Log-Analytics.html">Log Analytics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Logic-Apps.html">Logic Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="MSI.html">MSI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Machine-Learning-Compute.html">Machine Learning Compute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Managed-Services.html">Managed Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Management-Groups.html">Management Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Management-Partner.html">Management Partner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Maps.html">Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Market-Place-Ordering.html">Market Place Ordering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Media-Services.html">Media Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Metrics-Advisor.html">Metrics Advisor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Mixed-Reality.html">Mixed Reality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Monitoring.html">Monitoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="NetApp.html">NetApp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Network.html">Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Notification-Hubs.html">Notification Hubs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="OSS-RDBMS.html">OSS RDBMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Other.html">Other</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Peering.html">Peering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Policy-Insights.html">Policy Insights</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Power-BI-Embedded.html">Power BI Embedded</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Private-DNS.html">Private DNS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Recovery-Services.html">Recovery Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Recovery-Services-Backup.html">Recovery Services Backup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Redis-Cache.html">Redis Cache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Relay.html">Relay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Reservations.html">Reservations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Resource-Graph.html">Resource Graph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Resource-Management.html">Resource Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SAP-Hana-on-Azure.html">SAP Hana on Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SQL.html">SQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SQL-Virtual-Machine.html">SQL Virtual Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Scheduler.html">Scheduler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Search.html">Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Search-Management.html">Search Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Security-Management.html">Security Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Serial-Console.html">Serial Console</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Server-Management.html">Server Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Service-Bus.html">Service Bus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Service-Fabric.html">Service Fabric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SignalR-Management.html">SignalR Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Storage.html">Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Storage-Sync.html">Storage Sync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Subscription.html">Subscription</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Text-Analytics.html">Text Analytics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Traffic-Manager.html">Traffic Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="VMWare-by-CloudSimple.html">VMWare by CloudSimple</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Virtual-Machines.html">Virtual Machines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Web-Apps.html">Web Apps</a></li>
+</ul>
+
+            
+          
+
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Cognitive Services Vision ComputerVision</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/ref/Cognitive-Services-Vision-ComputerVision.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="cognitive-services-vision-computervision">
+<h1>Cognitive Services Vision ComputerVision<a class="headerlink" href="#cognitive-services-vision-computervision" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="client-packages">
+<h2>Client Packages<a class="headerlink" href="#client-packages" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="azure-cognitiveservices-vision-computervision">
+<h3>azure-cognitiveservices-vision-computervision<a class="headerlink" href="#azure-cognitiveservices-vision-computervision" title="Permalink to this headline">¶</a></h3>
+<p><strong>Published Versions</strong></p>
+<embed>
+    <ul id="vazure-cognitiveservices-vision-computervision"></ul>
+    <script type="text/javascript">
+        populateIndexList('#vazure-cognitiveservices-vision-computervision', 'azure-cognitiveservices-vision-computervision')
+    </script>
+</embed><hr class="docutils" />
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Cognitive-Services-Vision-ContentModerator.html" class="btn btn-neutral float-right" title="Cognitive Services Vision ContentModerator" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="Cognitive-Services-Search-WebSearch.html" class="btn btn-neutral float-left" title="Cognitive Services Search WebSearch" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, Microsoft
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

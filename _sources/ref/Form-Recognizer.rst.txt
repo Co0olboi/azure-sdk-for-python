@@ -1,0 +1,28 @@
+
+===============
+Form Recognizer
+===============
+
+
+***************
+Client Packages
+***************
+
+
+-----------------------
+azure-ai-formrecognizer
+-----------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-ai-formrecognizer"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-ai-formrecognizer', 'azure-ai-formrecognizer')
+        </script>
+    </embed>
+
+------------
+

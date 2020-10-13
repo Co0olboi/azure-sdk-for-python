@@ -1,0 +1,28 @@
+
+========
+Identity
+========
+
+
+***************
+Client Packages
+***************
+
+
+--------------
+azure-identity
+--------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-identity"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-identity', 'azure-identity')
+        </script>
+    </embed>
+
+------------
+

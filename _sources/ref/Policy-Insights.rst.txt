@@ -1,0 +1,28 @@
+
+===============
+Policy Insights
+===============
+
+
+*******************
+Management Packages
+*******************
+
+
+-------------------------
+azure-mgmt-policyinsights
+-------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-policyinsights"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-policyinsights', 'azure-mgmt-policyinsights')
+        </script>
+    </embed>
+
+------------
+

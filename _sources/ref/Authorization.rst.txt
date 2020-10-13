@@ -1,0 +1,28 @@
+
+=============
+Authorization
+=============
+
+
+*******************
+Management Packages
+*******************
+
+
+------------------------
+azure-mgmt-authorization
+------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-authorization"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-authorization', 'azure-mgmt-authorization')
+        </script>
+    </embed>
+
+------------
+

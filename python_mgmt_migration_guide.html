@@ -1,0 +1,518 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Migration Guide - Resource Management &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/default_overrides.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/js/get_options.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Multi-cloud - use Azure on all regions" href="multicloud.html" />
+    <link rel="prev" title="Quickstart Tutorial - Resource Management" href="mgmt_quickstart.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+    
+    
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mgmt_quickstart.html">Quickstart Tutorial - Resource Management</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Migration Guide - Resource Management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#guide-for-migrating-to-the-next-generation-of-azure-python-sdk-for-management-libraries">Guide for migrating to the next generation of Azure Python SDK for Management Libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#table-of-contents">Table of contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#updated-python-packages">Updated Python Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#general-changes">General Changes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#authentication">Authentication</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#client-api-changes">Client API Changes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#async-operations-change">Async Operations Change</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#additional-samples">Additional Samples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#need-help">Need help?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Services</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ref/API-Management.html">API Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Active-Directory.html">Active Directory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Advisor.html">Advisor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Alerts-Management.html">Alerts Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/App-Configuration.html">App Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/App-Service.html">App Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Application-Insights.html">Application Insights</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Attestation.html">Attestation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Authorization.html">Authorization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Automation.html">Automation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Batch.html">Batch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Billing.html">Billing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Bot-Service.html">Bot Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/CDN.html">CDN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services.html">Cognitive Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Anomaly-Detector.html">Cognitive Services Anomaly Detector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Knowledge-QnA-Maker.html">Cognitive Services Knowledge QnA Maker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Language-LUIS.html">Cognitive Services Language LUIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Language-Spellcheck.html">Cognitive Services Language Spellcheck</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Language-TextAnalytics.html">Cognitive Services Language TextAnalytics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Personalizer.html">Cognitive Services Personalizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Recognizer.html">Cognitive Services Recognizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-Autosuggest.html">Cognitive Services Search Autosuggest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-CustomImageSearch.html">Cognitive Services Search CustomImageSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-CustomSearch.html">Cognitive Services Search CustomSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-EntitySearch.html">Cognitive Services Search EntitySearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-ImageSearch.html">Cognitive Services Search ImageSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-NewsSearch.html">Cognitive Services Search NewsSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-VideoSearch.html">Cognitive Services Search VideoSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-VisualSearch.html">Cognitive Services Search VisualSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-WebSearch.html">Cognitive Services Search WebSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Vision-ComputerVision.html">Cognitive Services Vision ComputerVision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Vision-ContentModerator.html">Cognitive Services Vision ContentModerator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Vision-CustomVision.html">Cognitive Services Vision CustomVision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Vision-Face.html">Cognitive Services Vision Face</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Commerce.html">Commerce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Communication.html">Communication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Consumption.html">Consumption</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Container-Instance.html">Container Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Container-Registry.html">Container Registry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Container-Service.html">Container Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cosmos.html">Cosmos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cosmos-DB.html">Cosmos DB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cost-Management.html">Cost Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/DNS.html">DNS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Data-Bricks.html">Data Bricks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Data-Factory.html">Data Factory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Data-Lake-Analytics.html">Data Lake Analytics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Data-Lake-Store.html">Data Lake Store</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Data-Share.html">Data Share</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Data-migration.html">Data migration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Deployment-Manager.html">Deployment Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Dev-Test-Labs.html">Dev Test Labs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/DevSpaces.html">DevSpaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Edge-Gateway.html">Edge Gateway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Event-Grid.html">Event Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Event-Hub.html">Event Hub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Form-Recognizer.html">Form Recognizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Front-Door.html">Front Door</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/HDInsight.html">HDInsight</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Healthcare-APIs.html">Healthcare APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Hybrid-Cloud.html">Hybrid Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Identity.html">Identity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/ImageBuilder.html">ImageBuilder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/IoT.html">IoT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/IoT-Central.html">IoT Central</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Keyvault.html">Keyvault</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Kusto.html">Kusto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/LabServices.html">LabServices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Log-Analytics.html">Log Analytics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Logic-Apps.html">Logic Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/MSI.html">MSI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Machine-Learning-Compute.html">Machine Learning Compute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Managed-Services.html">Managed Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Management-Groups.html">Management Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Management-Partner.html">Management Partner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Maps.html">Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Market-Place-Ordering.html">Market Place Ordering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Media-Services.html">Media Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Metrics-Advisor.html">Metrics Advisor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Mixed-Reality.html">Mixed Reality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Monitoring.html">Monitoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/NetApp.html">NetApp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Network.html">Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Notification-Hubs.html">Notification Hubs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/OSS-RDBMS.html">OSS RDBMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Other.html">Other</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Peering.html">Peering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Policy-Insights.html">Policy Insights</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Power-BI-Embedded.html">Power BI Embedded</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Private-DNS.html">Private DNS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Recovery-Services.html">Recovery Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Recovery-Services-Backup.html">Recovery Services Backup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Redis-Cache.html">Redis Cache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Relay.html">Relay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Reservations.html">Reservations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Resource-Graph.html">Resource Graph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Resource-Management.html">Resource Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/SAP-Hana-on-Azure.html">SAP Hana on Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/SQL.html">SQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/SQL-Virtual-Machine.html">SQL Virtual Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Scheduler.html">Scheduler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Search.html">Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Search-Management.html">Search Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Security-Management.html">Security Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Serial-Console.html">Serial Console</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Server-Management.html">Server Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Service-Bus.html">Service Bus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Service-Fabric.html">Service Fabric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/SignalR-Management.html">SignalR Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Storage.html">Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Storage-Sync.html">Storage Sync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Subscription.html">Subscription</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Text-Analytics.html">Text Analytics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Traffic-Manager.html">Traffic Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/VMWare-by-CloudSimple.html">VMWare by CloudSimple</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Virtual-Machines.html">Virtual Machines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Web-Apps.html">Web Apps</a></li>
+</ul>
+
+            
+          
+
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Migration Guide - Resource Management</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/python_mgmt_migration_guide.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="migration-guide-resource-management">
+<h1>Migration Guide - Resource Management<a class="headerlink" href="#migration-guide-resource-management" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="guide-for-migrating-to-the-next-generation-of-azure-python-sdk-for-management-libraries">
+<h2>Guide for migrating to the next generation of Azure Python SDK for Management Libraries<a class="headerlink" href="#guide-for-migrating-to-the-next-generation-of-azure-python-sdk-for-management-libraries" title="Permalink to this headline">¶</a></h2>
+<p>This document is intended for users that are familiar with an older
+version of the Python SDK for managment libraries and wish to migrate
+their application to the next version of Azure resource management
+libraries</p>
+<p>For users new to the Python SDK for resource management libraries,
+please see the <a class="reference external" href="http://aka.ms/azsdk/python/mgmt">quickstart
+guide</a></p>
+</div>
+<div class="section" id="table-of-contents">
+<h2>Table of contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="#prerequisites">Prerequisites</a></p></li>
+<li><p><a class="reference external" href="#updated-python-packages">Updated Python Packages</a></p></li>
+<li><p><a class="reference external" href="#general-changes">General Changes</a></p></li>
+<li><p><a class="reference external" href="#authentication">Authentication</a></p></li>
+<li><p><a class="reference external" href="#client-api-changes">Client API Changes</a></p></li>
+<li><p><a class="reference external" href="#additional-samples">Additional Samples</a></p></li>
+</ul>
+</div>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Active Azure subscription</p></li>
+<li><p>Python 2.7 or 3.5+</p></li>
+</ul>
+</div>
+<div class="section" id="updated-python-packages">
+<h2>Updated Python Packages<a class="headerlink" href="#updated-python-packages" title="Permalink to this headline">¶</a></h2>
+<p>You can refer to the <a class="reference external" href="https://azure.github.io/azure-sdk/releases/latest/mgmt/python.html">this
+site</a>
+to see all the new Python packages.</p>
+<p>For packages that are already generally available (GA), you can directly install the package using pip. Take Azure Compute
+service for example, simply do:
+<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">azure-mgmt-compute</span></code></p>
+<p>The release history for azure-mgmt-compute can be found at <a class="reference external" href="https://pypi.org/project/azure-mgmt-compute/#history">https://pypi.org/project/azure-mgmt-compute/#history</a></p>
+<p>You will notice that there was a beta release in release history, and the changelog for this version mentioned that “this version uses a next-generation code generator that introduces important breaking changes”. This indicates the package is based on the new generator.</p>
+<p>In addition, some next-generation Python SDK management client libraries might still in Public Preview. The preview version SDK will be contain a <code class="docutils literal notranslate"><span class="pre">b</span></code> in its version to number to indicate that it’s a beta release (e.g.``10.0.0b1``).</p>
+<p>For those beta releases, please install the package based on the beta version number, for
+example, to install the latest preview package for BetaServiceExample, please use:
+<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">azure-mgmt-beta-service-example==10.0.0b1</span></code></p>
+</div>
+<div class="section" id="general-changes">
+<h2>General Changes<a class="headerlink" href="#general-changes" title="Permalink to this headline">¶</a></h2>
+<p>The latest Azure Python SDK for management libraries is a result of our
+efforts to create a resource management client library that is
+user-friendly and idiomatic to the Python ecosystem.</p>
+<p>While conforming to the <a class="reference external" href="https://azure.github.io/azure-sdk/python_introduction.html">new Azure SDK Design Guidelines for
+Python</a>,
+we have tried our best to minimize the breaking changes. Most of the API
+signatures have stayed the same to offer user an easier migration
+experience.</p>
+<p>The important breaking changes are listed in the following sections:</p>
+<div class="section" id="authentication">
+<h3>Authentication<a class="headerlink" href="#authentication" title="Permalink to this headline">¶</a></h3>
+<p>In old version, <code class="docutils literal notranslate"><span class="pre">ServicePrincipalCredentials</span></code> in <code class="docutils literal notranslate"><span class="pre">azure.common</span></code> is
+used for authenticating to Azure and creating a service client</p>
+<p>In new version, in order to provide an unified authentication based on
+Azure Identity for all Azure SDKs, the authentication mechanism has been
+re-designed and replaced by <code class="docutils literal notranslate"><span class="pre">azure-identity</span></code> library</p>
+<p>To use the new <code class="docutils literal notranslate"><span class="pre">azure-identity</span></code> authentication mechanism, please use
+<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">azure-identity</span></code> to install the package</p>
+<p>To the show the code snippets for the change:</p>
+<p><strong>In old version</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">azure.mgmt.compute</span>
+<span class="kn">from</span> <span class="nn">azure.common.credentials</span> <span class="kn">import</span> <span class="n">ServicePrincipalCredentials</span>
+
+<span class="n">credentials</span> <span class="o">=</span> <span class="n">ServicePrincipalCredentials</span><span class="p">(</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="n">client_id</span><span class="p">,</span>
+    <span class="n">secret</span><span class="o">=</span><span class="n">client_secret</span><span class="p">,</span>
+    <span class="n">tenant</span><span class="o">=</span><span class="n">tenant_id</span>
+<span class="p">)</span>
+<span class="n">compute_client</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">mgmt</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ComputeManagementClient</span><span class="p">(</span><span class="n">credentials</span><span class="o">=</span><span class="n">credentials</span><span class="p">,</span> <span class="n">subscription_id</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">subscription_id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Equivalent in new version</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">azure.mmgt.compute</span>
+<span class="kn">from</span> <span class="nn">azure.identity</span> <span class="kn">import</span> <span class="n">ClientSecretCredential</span>
+
+<span class="n">credential</span> <span class="o">=</span> <span class="n">ClientSecretCredential</span><span class="p">(</span>
+    <span class="n">client_secret</span><span class="o">=</span><span class="n">client_secret</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="o">=</span><span class="n">client_id</span><span class="p">,</span>
+    <span class="n">tenant_id</span><span class="o">=</span><span class="n">tenant_id</span>
+<span class="p">)</span>
+<span class="n">compute_client</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">mgmt</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">ComputeManagementClient</span><span class="p">(</span><span class="n">credential</span><span class="o">=</span><span class="n">credential</span><span class="p">,</span> <span class="n">subscription_id</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">subscription_id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For detailed information on the benefits of using the new authentication
+classes as well as all available authentication options, please refer to <a class="reference external" href="https://docs.microsoft.com/azure/developer/python/azure-sdk-authenticate?view=azure-python&amp;tabs=cmd">this
+page</a></p>
+</div>
+</div>
+<div class="section" id="client-api-changes">
+<h2>Client API Changes<a class="headerlink" href="#client-api-changes" title="Permalink to this headline">¶</a></h2>
+<p>Most of the API has stayed the same to provide an easier migration
+experience. There is a minor change regarding the async operations</p>
+<div class="section" id="async-operations-change">
+<h3>Async Operations Change<a class="headerlink" href="#async-operations-change" title="Permalink to this headline">¶</a></h3>
+<p>To differentiate between asynchronous and synchronous API operations in
+the new version, an explicit <code class="docutils literal notranslate"><span class="pre">begin_</span></code> prefix is added for all the
+async APIs operations (this includes operations where the user gets a
+<code class="docutils literal notranslate"><span class="pre">202</span></code> response code or needs to call <code class="docutils literal notranslate"><span class="pre">.result()</span></code> explicitly to get
+the response)</p>
+<p>To show an example (creating virtual machine):</p>
+<p><strong>In old version</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">compute_client</span><span class="o">.</span><span class="n">virtual_machines</span><span class="o">.</span><span class="n">create_or_update</span><span class="p">(</span>
+    <span class="n">group_name</span><span class="p">,</span>
+    <span class="n">vm_name</span><span class="p">,</span>
+    <span class="n">parameters</span>
+<span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Equivalent in new version</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">compute_client</span><span class="o">.</span><span class="n">virtual_machines</span><span class="o">.</span><span class="n">begin_create_or_update</span><span class="p">(</span>
+    <span class="n">group_name</span><span class="p">,</span>
+    <span class="n">vm_name</span><span class="p">,</span>
+    <span class="n">parameters</span>
+<span class="p">)</span>
+<span class="n">vm</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="additional-samples">
+<h2>Additional Samples<a class="headerlink" href="#additional-samples" title="Permalink to this headline">¶</a></h2>
+<p>More samples can be found at :</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://aka.ms/azsdk/python/mgmt">Quickstart for new version of SDK</a></p></li>
+<li><p><a class="reference external" href="https://docs.microsoft.com/samples/browse/?languages=python&amp;term=Getting%20started%20-%20Managing">Code Samples for Resource Management Libraries</a></p></li>
+<li><p><a class="reference external" href="https://docs.microsoft.com/azure/developer/python/azure-sdk-authenticate?view=azure-python&amp;tabs=cmd">Authentication Documentation</a></p></li>
+</ul>
+</div>
+<div class="section" id="need-help">
+<h2>Need help?<a class="headerlink" href="#need-help" title="Permalink to this headline">¶</a></h2>
+<p>If you have encountered an issue during migration, please file an issue
+via <a class="reference external" href="https://github.com/Azure/azure-sdk-for-python/issues">Github
+Issues</a> and
+make sure you add the “Preview” label to the issue</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="multicloud.html" class="btn btn-neutral float-right" title="Multi-cloud - use Azure on all regions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="mgmt_quickstart.html" class="btn btn-neutral float-left" title="Quickstart Tutorial - Resource Management" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, Microsoft
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

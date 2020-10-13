@@ -1,0 +1,28 @@
+
+==============
+Resource Graph
+==============
+
+
+*******************
+Management Packages
+*******************
+
+
+------------------------
+azure-mgmt-resourcegraph
+------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-resourcegraph"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-resourcegraph', 'azure-mgmt-resourcegraph')
+        </script>
+    </embed>
+
+------------
+

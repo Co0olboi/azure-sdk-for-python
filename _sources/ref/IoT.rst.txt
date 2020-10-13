@@ -1,0 +1,46 @@
+
+===
+IoT
+===
+
+
+*******************
+Management Packages
+*******************
+
+
+-----------------
+azure-mgmt-iothub
+-----------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-iothub"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-iothub', 'azure-mgmt-iothub')
+        </script>
+    </embed>
+
+------------
+
+
+-------------------------------------
+azure-mgmt-iothubprovisioningservices
+-------------------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-iothubprovisioningservices"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-iothubprovisioningservices', 'azure-mgmt-iothubprovisioningservices')
+        </script>
+    </embed>
+
+------------
+

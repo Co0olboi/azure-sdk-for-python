@@ -1,0 +1,28 @@
+
+=========
+OSS RDBMS
+=========
+
+
+*******************
+Management Packages
+*******************
+
+
+----------------
+azure-mgmt-rdbms
+----------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-rdbms"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-rdbms', 'azure-mgmt-rdbms')
+        </script>
+    </embed>
+
+------------
+

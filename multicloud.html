@@ -1,0 +1,562 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Multi-cloud - use Azure on all regions &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/default_overrides.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/js/get_options.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Exception handling" href="exceptions.html" />
+    <link rel="prev" title="Migration Guide - Resource Management" href="python_mgmt_migration_guide.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+    
+    
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mgmt_quickstart.html">Quickstart Tutorial - Resource Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_mgmt_migration_guide.html">Migration Guide - Resource Management</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Multi-cloud - use Azure on all regions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#using-predeclared-cloud-definition">Using predeclared cloud definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-your-own-cloud-definition-e-g-azure-stack">Using your own cloud definition (e.g. Azure Stack)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-adal">Using ADAL</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#azure-government">Azure Government</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-germany">Azure Germany</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#azure-china">Azure China</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Services</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ref/API-Management.html">API Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Active-Directory.html">Active Directory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Advisor.html">Advisor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Alerts-Management.html">Alerts Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/App-Configuration.html">App Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/App-Service.html">App Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Application-Insights.html">Application Insights</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Attestation.html">Attestation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Authorization.html">Authorization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Automation.html">Automation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Batch.html">Batch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Billing.html">Billing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Bot-Service.html">Bot Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/CDN.html">CDN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services.html">Cognitive Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Anomaly-Detector.html">Cognitive Services Anomaly Detector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Knowledge-QnA-Maker.html">Cognitive Services Knowledge QnA Maker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Language-LUIS.html">Cognitive Services Language LUIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Language-Spellcheck.html">Cognitive Services Language Spellcheck</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Language-TextAnalytics.html">Cognitive Services Language TextAnalytics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Personalizer.html">Cognitive Services Personalizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Recognizer.html">Cognitive Services Recognizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-Autosuggest.html">Cognitive Services Search Autosuggest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-CustomImageSearch.html">Cognitive Services Search CustomImageSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-CustomSearch.html">Cognitive Services Search CustomSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-EntitySearch.html">Cognitive Services Search EntitySearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-ImageSearch.html">Cognitive Services Search ImageSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-NewsSearch.html">Cognitive Services Search NewsSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-VideoSearch.html">Cognitive Services Search VideoSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-VisualSearch.html">Cognitive Services Search VisualSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-WebSearch.html">Cognitive Services Search WebSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Vision-ComputerVision.html">Cognitive Services Vision ComputerVision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Vision-ContentModerator.html">Cognitive Services Vision ContentModerator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Vision-CustomVision.html">Cognitive Services Vision CustomVision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Vision-Face.html">Cognitive Services Vision Face</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Commerce.html">Commerce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Communication.html">Communication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Consumption.html">Consumption</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Container-Instance.html">Container Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Container-Registry.html">Container Registry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Container-Service.html">Container Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cosmos.html">Cosmos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cosmos-DB.html">Cosmos DB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cost-Management.html">Cost Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/DNS.html">DNS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Data-Bricks.html">Data Bricks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Data-Factory.html">Data Factory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Data-Lake-Analytics.html">Data Lake Analytics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Data-Lake-Store.html">Data Lake Store</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Data-Share.html">Data Share</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Data-migration.html">Data migration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Deployment-Manager.html">Deployment Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Dev-Test-Labs.html">Dev Test Labs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/DevSpaces.html">DevSpaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Edge-Gateway.html">Edge Gateway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Event-Grid.html">Event Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Event-Hub.html">Event Hub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Form-Recognizer.html">Form Recognizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Front-Door.html">Front Door</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/HDInsight.html">HDInsight</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Healthcare-APIs.html">Healthcare APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Hybrid-Cloud.html">Hybrid Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Identity.html">Identity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/ImageBuilder.html">ImageBuilder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/IoT.html">IoT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/IoT-Central.html">IoT Central</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Keyvault.html">Keyvault</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Kusto.html">Kusto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/LabServices.html">LabServices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Log-Analytics.html">Log Analytics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Logic-Apps.html">Logic Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/MSI.html">MSI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Machine-Learning-Compute.html">Machine Learning Compute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Managed-Services.html">Managed Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Management-Groups.html">Management Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Management-Partner.html">Management Partner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Maps.html">Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Market-Place-Ordering.html">Market Place Ordering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Media-Services.html">Media Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Metrics-Advisor.html">Metrics Advisor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Mixed-Reality.html">Mixed Reality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Monitoring.html">Monitoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/NetApp.html">NetApp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Network.html">Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Notification-Hubs.html">Notification Hubs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/OSS-RDBMS.html">OSS RDBMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Other.html">Other</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Peering.html">Peering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Policy-Insights.html">Policy Insights</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Power-BI-Embedded.html">Power BI Embedded</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Private-DNS.html">Private DNS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Recovery-Services.html">Recovery Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Recovery-Services-Backup.html">Recovery Services Backup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Redis-Cache.html">Redis Cache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Relay.html">Relay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Reservations.html">Reservations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Resource-Graph.html">Resource Graph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Resource-Management.html">Resource Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/SAP-Hana-on-Azure.html">SAP Hana on Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/SQL.html">SQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/SQL-Virtual-Machine.html">SQL Virtual Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Scheduler.html">Scheduler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Search.html">Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Search-Management.html">Search Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Security-Management.html">Security Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Serial-Console.html">Serial Console</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Server-Management.html">Server Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Service-Bus.html">Service Bus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Service-Fabric.html">Service Fabric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/SignalR-Management.html">SignalR Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Storage.html">Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Storage-Sync.html">Storage Sync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Subscription.html">Subscription</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Text-Analytics.html">Text Analytics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Traffic-Manager.html">Traffic Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/VMWare-by-CloudSimple.html">VMWare by CloudSimple</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Virtual-Machines.html">Virtual Machines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Web-Apps.html">Web Apps</a></li>
+</ul>
+
+            
+          
+
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Multi-cloud - use Azure on all regions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/multicloud.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="multi-cloud-use-azure-on-all-regions">
+<h1>Multi-cloud - use Azure on all regions<a class="headerlink" href="#multi-cloud-use-azure-on-all-regions" title="Permalink to this headline">¶</a></h1>
+<p>You can use the Azure SDK for Python to connect to all regions where Azure is available
+(<a class="reference external" href="https://azure.microsoft.com/regions/services">list of Azure regions is available here</a>).</p>
+<p>By default, the Azure SDK for Python is configured to connect to public Azure.</p>
+<div class="section" id="using-predeclared-cloud-definition">
+<h2>Using predeclared cloud definition<a class="headerlink" href="#using-predeclared-cloud-definition" title="Permalink to this headline">¶</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>The <cite>msrestazure</cite> package must be superior or equals to 0.4.11 for this section.</p>
+</div>
+<p>You can use the <cite>azure_cloud</cite> module of <cite>msrestazure</cite></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">msrestazure.azure_cloud</span> <span class="kn">import</span> <span class="n">AZURE_CHINA_CLOUD</span>
+<span class="kn">from</span> <span class="nn">msrestazure.azure_active_directory</span> <span class="kn">import</span> <span class="n">UserPassCredentials</span>
+<span class="kn">from</span> <span class="nn">azure.mgmt.resource</span> <span class="kn">import</span> <span class="n">ResourceManagementClient</span>
+
+<span class="n">credentials</span> <span class="o">=</span> <span class="n">UserPassCredentials</span><span class="p">(</span>
+    <span class="n">login</span><span class="p">,</span>
+    <span class="n">password</span><span class="p">,</span>
+    <span class="n">cloud_environment</span><span class="o">=</span><span class="n">AZURE_CHINA_CLOUD</span>
+<span class="p">)</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">ResourceManagementClient</span><span class="p">(</span>
+    <span class="n">credentials</span><span class="p">,</span>
+    <span class="n">subscription_id</span><span class="p">,</span>
+    <span class="n">base_url</span><span class="o">=</span><span class="n">AZURE_CHINA_CLOUD</span><span class="o">.</span><span class="n">endpoints</span><span class="o">.</span><span class="n">resource_manager</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<dl class="simple">
+<dt>Available cloud definition are</dt><dd><ul class="simple">
+<li><p>AZURE_PUBLIC_CLOUD</p></li>
+<li><p>AZURE_CHINA_CLOUD</p></li>
+<li><p>AZURE_US_GOV_CLOUD</p></li>
+<li><p>AZURE_GERMAN_CLOUD</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="using-your-own-cloud-definition-e-g-azure-stack">
+<h2>Using your own cloud definition (e.g. Azure Stack)<a class="headerlink" href="#using-your-own-cloud-definition-e-g-azure-stack" title="Permalink to this headline">¶</a></h2>
+<p>ARM has a metadata endpoint to help you:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">msrestazure.azure_cloud</span> <span class="kn">import</span> <span class="n">get_cloud_from_metadata_endpoint</span>
+<span class="kn">from</span> <span class="nn">msrestazure.azure_active_directory</span> <span class="kn">import</span> <span class="n">UserPassCredentials</span>
+<span class="kn">from</span> <span class="nn">azure.mgmt.resource</span> <span class="kn">import</span> <span class="n">ResourceManagementClient</span>
+
+<span class="n">mystack_cloud</span> <span class="o">=</span> <span class="n">get_cloud_from_metadata_endpoint</span><span class="p">(</span><span class="s2">&quot;https://myazurestack-arm-endpoint.com&quot;</span><span class="p">)</span>
+<span class="n">credentials</span> <span class="o">=</span> <span class="n">UserPassCredentials</span><span class="p">(</span>
+    <span class="n">login</span><span class="p">,</span>
+    <span class="n">password</span><span class="p">,</span>
+    <span class="n">cloud_environment</span><span class="o">=</span><span class="n">mystack_cloud</span>
+<span class="p">)</span>
+<span class="n">client</span> <span class="o">=</span> <span class="n">ResourceManagementClient</span><span class="p">(</span>
+    <span class="n">credentials</span><span class="p">,</span>
+    <span class="n">subscription_id</span><span class="p">,</span>
+    <span class="n">base_url</span><span class="o">=</span><span class="n">mystack_cloud</span><span class="o">.</span><span class="n">endpoints</span><span class="o">.</span><span class="n">resource_manager</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-adal">
+<h2>Using ADAL<a class="headerlink" href="#using-adal" title="Permalink to this headline">¶</a></h2>
+<p>To connect to another region, a few things have to be considered:</p>
+<ul class="simple">
+<li><p>What is the endpoint where to ask for a token (authentication)?</p></li>
+<li><p>What is the endpoint where I will use this token (usage)?</p></li>
+</ul>
+<p>This is a generic example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">adal</span>
+<span class="kn">from</span> <span class="nn">msrestazure.azure_active_directory</span> <span class="kn">import</span> <span class="n">AdalAuthentication</span>
+<span class="kn">from</span> <span class="nn">azure.mgmt.resource</span> <span class="kn">import</span> <span class="n">ResourceManagementClient</span>
+
+<span class="c1"># Service Principal</span>
+<span class="n">tenant</span> <span class="o">=</span> <span class="s1">&#39;ABCDEFGH-1234-1234-1234-ABCDEFGHIJKL&#39;</span>
+<span class="n">client_id</span> <span class="o">=</span> <span class="s1">&#39;ABCDEFGH-1234-1234-1234-ABCDEFGHIJKL&#39;</span>
+<span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;password</span>
+
+<span class="c1"># Public Azure - default values</span>
+<span class="n">authentication_endpoint</span> <span class="o">=</span> <span class="s1">&#39;https://login.microsoftonline.com/&#39;</span>
+<span class="n">azure_endpoint</span> <span class="o">=</span> <span class="s1">&#39;https://management.azure.com/&#39;</span>
+
+<span class="n">context</span> <span class="o">=</span> <span class="n">adal</span><span class="o">.</span><span class="n">AuthenticationContext</span><span class="p">(</span><span class="n">authentication_endpoint</span><span class="o">+</span><span class="n">tenant</span><span class="p">)</span>
+<span class="n">credentials</span> <span class="o">=</span> <span class="n">AdalAuthentication</span><span class="p">(</span>
+    <span class="n">context</span><span class="o">.</span><span class="n">acquire_token_with_client_credentials</span><span class="p">,</span>
+    <span class="n">azure_endpoint</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="p">,</span>
+    <span class="n">password</span>
+<span class="p">)</span>
+<span class="n">subscription_id</span> <span class="o">=</span> <span class="s1">&#39;33333333-3333-3333-3333-333333333333&#39;</span>
+
+<span class="n">resource_client</span> <span class="o">=</span> <span class="n">ResourceManagementClient</span><span class="p">(</span>
+    <span class="n">credentials</span><span class="p">,</span>
+    <span class="n">subscription_id</span><span class="p">,</span>
+    <span class="n">base_url</span><span class="o">=</span><span class="n">azure_endpoint</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<div class="section" id="azure-government">
+<h3>Azure Government<a class="headerlink" href="#azure-government" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">adal</span>
+<span class="kn">from</span> <span class="nn">msrestazure.azure_active_directory</span> <span class="kn">import</span> <span class="n">AdalAuthentication</span>
+<span class="kn">from</span> <span class="nn">azure.mgmt.resource</span> <span class="kn">import</span> <span class="n">ResourceManagementClient</span>
+
+<span class="c1"># Service Principal</span>
+<span class="n">tenant</span> <span class="o">=</span> <span class="s1">&#39;ABCDEFGH-1234-1234-1234-ABCDEFGHIJKL&#39;</span>
+<span class="n">client_id</span> <span class="o">=</span> <span class="s1">&#39;ABCDEFGH-1234-1234-1234-ABCDEFGHIJKL&#39;</span>
+<span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;password</span>
+
+<span class="c1"># Government</span>
+<span class="n">authentication_endpoint</span> <span class="o">=</span> <span class="s1">&#39;https://login.microsoftonline.us/&#39;</span>
+<span class="n">azure_endpoint</span> <span class="o">=</span> <span class="s1">&#39;https://management.usgovcloudapi.net/&#39;</span>
+
+<span class="n">context</span> <span class="o">=</span> <span class="n">adal</span><span class="o">.</span><span class="n">AuthenticationContext</span><span class="p">(</span><span class="n">authentication_endpoint</span><span class="o">+</span><span class="n">tenant</span><span class="p">)</span>
+<span class="n">credentials</span> <span class="o">=</span> <span class="n">AdalAuthentication</span><span class="p">(</span>
+    <span class="n">context</span><span class="o">.</span><span class="n">acquire_token_with_client_credentials</span><span class="p">,</span>
+    <span class="n">azure_endpoint</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="p">,</span>
+    <span class="n">password</span>
+<span class="p">)</span>
+<span class="n">subscription_id</span> <span class="o">=</span> <span class="s1">&#39;33333333-3333-3333-3333-333333333333&#39;</span>
+
+<span class="n">resource_client</span> <span class="o">=</span> <span class="n">ResourceManagementClient</span><span class="p">(</span>
+    <span class="n">credentials</span><span class="p">,</span>
+    <span class="n">subscription_id</span><span class="p">,</span>
+    <span class="n">base_url</span><span class="o">=</span><span class="n">azure_endpoint</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="azure-germany">
+<h3>Azure Germany<a class="headerlink" href="#azure-germany" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">adal</span>
+<span class="kn">from</span> <span class="nn">msrestazure.azure_active_directory</span> <span class="kn">import</span> <span class="n">AdalAuthentication</span>
+<span class="kn">from</span> <span class="nn">azure.mgmt.resource</span> <span class="kn">import</span> <span class="n">ResourceManagementClient</span>
+
+<span class="c1"># Service Principal</span>
+<span class="n">tenant</span> <span class="o">=</span> <span class="s1">&#39;ABCDEFGH-1234-1234-1234-ABCDEFGHIJKL&#39;</span>
+<span class="n">client_id</span> <span class="o">=</span> <span class="s1">&#39;ABCDEFGH-1234-1234-1234-ABCDEFGHIJKL&#39;</span>
+<span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;password</span>
+
+<span class="c1"># Azure Germany</span>
+<span class="n">authentication_endpoint</span> <span class="o">=</span> <span class="s1">&#39;https://login.microsoftonline.de/&#39;</span>
+<span class="n">azure_endpoint</span> <span class="o">=</span> <span class="s1">&#39;https://management.microsoftazure.de/&#39;</span>
+
+<span class="n">context</span> <span class="o">=</span> <span class="n">adal</span><span class="o">.</span><span class="n">AuthenticationContext</span><span class="p">(</span><span class="n">authentication_endpoint</span><span class="o">+</span><span class="n">tenant</span><span class="p">)</span>
+<span class="n">credentials</span> <span class="o">=</span> <span class="n">AdalAuthentication</span><span class="p">(</span>
+    <span class="n">context</span><span class="o">.</span><span class="n">acquire_token_with_client_credentials</span><span class="p">,</span>
+    <span class="n">azure_endpoint</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="p">,</span>
+    <span class="n">password</span>
+<span class="p">)</span>
+<span class="n">subscription_id</span> <span class="o">=</span> <span class="s1">&#39;33333333-3333-3333-3333-333333333333&#39;</span>
+
+<span class="n">resource_client</span> <span class="o">=</span> <span class="n">ResourceManagementClient</span><span class="p">(</span>
+    <span class="n">credentials</span><span class="p">,</span>
+    <span class="n">subscription_id</span><span class="p">,</span>
+    <span class="n">base_url</span><span class="o">=</span><span class="n">azure_endpoint</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="azure-china">
+<h3>Azure China<a class="headerlink" href="#azure-china" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">adal</span>
+<span class="kn">from</span> <span class="nn">msrestazure.azure_active_directory</span> <span class="kn">import</span> <span class="n">AdalAuthentication</span>
+<span class="kn">from</span> <span class="nn">azure.mgmt.resource</span> <span class="kn">import</span> <span class="n">ResourceManagementClient</span>
+
+<span class="c1"># Service Principal</span>
+<span class="n">tenant</span> <span class="o">=</span> <span class="s1">&#39;ABCDEFGH-1234-1234-1234-ABCDEFGHIJKL&#39;</span>
+<span class="n">client_id</span> <span class="o">=</span> <span class="s1">&#39;ABCDEFGH-1234-1234-1234-ABCDEFGHIJKL&#39;</span>
+<span class="n">password</span> <span class="o">=</span> <span class="s1">&#39;password</span>
+
+<span class="c1"># Azure China</span>
+<span class="n">authentication_endpoint</span> <span class="o">=</span> <span class="s1">&#39;https://login.chinacloudapi.cn/&#39;</span>
+<span class="n">azure_endpoint</span> <span class="o">=</span> <span class="s1">&#39;https://management.chinacloudapi.cn/&#39;</span>
+
+<span class="n">context</span> <span class="o">=</span> <span class="n">adal</span><span class="o">.</span><span class="n">AuthenticationContext</span><span class="p">(</span><span class="n">authentication_endpoint</span><span class="o">+</span><span class="n">tenant</span><span class="p">)</span>
+<span class="n">credentials</span> <span class="o">=</span> <span class="n">AdalAuthentication</span><span class="p">(</span>
+    <span class="n">context</span><span class="o">.</span><span class="n">acquire_token_with_client_credentials</span><span class="p">,</span>
+    <span class="n">azure_endpoint</span><span class="p">,</span>
+    <span class="n">client_id</span><span class="p">,</span>
+    <span class="n">password</span>
+<span class="p">)</span>
+<span class="n">subscription_id</span> <span class="o">=</span> <span class="s1">&#39;33333333-3333-3333-3333-333333333333&#39;</span>
+
+<span class="n">resource_client</span> <span class="o">=</span> <span class="n">ResourceManagementClient</span><span class="p">(</span>
+    <span class="n">credentials</span><span class="p">,</span>
+    <span class="n">subscription_id</span><span class="p">,</span>
+    <span class="n">base_url</span><span class="o">=</span><span class="n">azure_endpoint</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="exceptions.html" class="btn btn-neutral float-right" title="Exception handling" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="python_mgmt_migration_guide.html" class="btn btn-neutral float-left" title="Migration Guide - Resource Management" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, Microsoft
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

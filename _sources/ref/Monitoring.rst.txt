@@ -1,0 +1,28 @@
+
+==========
+Monitoring
+==========
+
+
+*******************
+Management Packages
+*******************
+
+
+------------------
+azure-mgmt-monitor
+------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-monitor"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-monitor', 'azure-mgmt-monitor')
+        </script>
+    </embed>
+
+------------
+

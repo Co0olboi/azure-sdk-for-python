@@ -1,0 +1,28 @@
+
+===============
+Traffic Manager
+===============
+
+
+*******************
+Management Packages
+*******************
+
+
+-------------------------
+azure-mgmt-trafficmanager
+-------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-trafficmanager"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-trafficmanager', 'azure-mgmt-trafficmanager')
+        </script>
+    </embed>
+
+------------
+

@@ -1,0 +1,28 @@
+
+===========
+Attestation
+===========
+
+
+*******************
+Management Packages
+*******************
+
+
+----------------------
+azure-mgmt-attestation
+----------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-attestation"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-attestation', 'azure-mgmt-attestation')
+        </script>
+    </embed>
+
+------------
+

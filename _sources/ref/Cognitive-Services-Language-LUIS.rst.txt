@@ -1,0 +1,28 @@
+
+================================
+Cognitive Services Language LUIS
+================================
+
+
+***************
+Client Packages
+***************
+
+
+-------------------------------------
+azure-cognitiveservices-language-luis
+-------------------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-cognitiveservices-language-luis"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-cognitiveservices-language-luis', 'azure-cognitiveservices-language-luis')
+        </script>
+    </embed>
+
+------------
+

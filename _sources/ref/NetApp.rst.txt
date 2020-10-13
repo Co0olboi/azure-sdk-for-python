@@ -1,0 +1,28 @@
+
+======
+NetApp
+======
+
+
+*******************
+Management Packages
+*******************
+
+
+-----------------
+azure-mgmt-netapp
+-----------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-netapp"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-netapp', 'azure-mgmt-netapp')
+        </script>
+    </embed>
+
+------------
+

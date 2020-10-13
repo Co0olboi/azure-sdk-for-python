@@ -1,0 +1,51 @@
+
+=================
+App Configuration
+=================
+
+
+***************
+Client Packages
+***************
+
+
+----------------------
+azure-appconfiguration
+----------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-appconfiguration"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-appconfiguration', 'azure-appconfiguration')
+        </script>
+    </embed>
+
+------------
+
+
+*******************
+Management Packages
+*******************
+
+
+---------------------------
+azure-mgmt-appconfiguration
+---------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-appconfiguration"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-appconfiguration', 'azure-mgmt-appconfiguration')
+        </script>
+    </embed>
+
+------------
+

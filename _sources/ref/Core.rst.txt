@@ -1,0 +1,64 @@
+
+====
+Core
+====
+
+
+***************
+Client Packages
+***************
+
+
+----------
+azure-core
+----------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-core"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-core', 'azure-core')
+        </script>
+    </embed>
+
+------------
+
+
+-----------------------------
+azure-core-tracing-opencensus
+-----------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-core-tracing-opencensus"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-core-tracing-opencensus', 'azure-core-tracing-opencensus')
+        </script>
+    </embed>
+
+------------
+
+
+--------------------------------
+azure-core-tracing-opentelemetry
+--------------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-core-tracing-opentelemetry"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-core-tracing-opentelemetry', 'azure-core-tracing-opentelemetry')
+        </script>
+    </embed>
+
+------------
+

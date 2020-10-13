@@ -1,0 +1,28 @@
+
+===
+SQL
+===
+
+
+*******************
+Management Packages
+*******************
+
+
+--------------
+azure-mgmt-sql
+--------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-sql"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-sql', 'azure-mgmt-sql')
+        </script>
+    </embed>
+
+------------
+

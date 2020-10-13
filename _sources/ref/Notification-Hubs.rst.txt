@@ -1,0 +1,28 @@
+
+=================
+Notification Hubs
+=================
+
+
+*******************
+Management Packages
+*******************
+
+
+---------------------------
+azure-mgmt-notificationhubs
+---------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-notificationhubs"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-notificationhubs', 'azure-mgmt-notificationhubs')
+        </script>
+    </embed>
+
+------------
+

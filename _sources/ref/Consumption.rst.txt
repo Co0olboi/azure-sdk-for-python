@@ -1,0 +1,28 @@
+
+===========
+Consumption
+===========
+
+
+*******************
+Management Packages
+*******************
+
+
+----------------------
+azure-mgmt-consumption
+----------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-consumption"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-consumption', 'azure-mgmt-consumption')
+        </script>
+    </embed>
+
+------------
+

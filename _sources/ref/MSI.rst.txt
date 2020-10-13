@@ -1,0 +1,28 @@
+
+===
+MSI
+===
+
+
+*******************
+Management Packages
+*******************
+
+
+--------------
+azure-mgmt-msi
+--------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-msi"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-msi', 'azure-mgmt-msi')
+        </script>
+    </embed>
+
+------------
+

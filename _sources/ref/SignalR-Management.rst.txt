@@ -1,0 +1,28 @@
+
+==================
+SignalR Management
+==================
+
+
+*******************
+Management Packages
+*******************
+
+
+------------------
+azure-mgmt-signalr
+------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-signalr"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-signalr', 'azure-mgmt-signalr')
+        </script>
+    </embed>
+
+------------
+

@@ -1,0 +1,28 @@
+
+===============
+Metrics Advisor
+===============
+
+
+***************
+Client Packages
+***************
+
+
+-----------------------
+azure-ai-metricsadvisor
+-----------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-ai-metricsadvisor"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-ai-metricsadvisor', 'azure-ai-metricsadvisor')
+        </script>
+    </embed>
+
+------------
+

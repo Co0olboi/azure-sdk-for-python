@@ -1,0 +1,28 @@
+
+=========
+Cosmos DB
+=========
+
+
+*******************
+Management Packages
+*******************
+
+
+-------------------
+azure-mgmt-cosmosdb
+-------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-cosmosdb"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-cosmosdb', 'azure-mgmt-cosmosdb')
+        </script>
+    </embed>
+
+------------
+

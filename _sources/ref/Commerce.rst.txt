@@ -1,0 +1,28 @@
+
+========
+Commerce
+========
+
+
+*******************
+Management Packages
+*******************
+
+
+-------------------
+azure-mgmt-commerce
+-------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-commerce"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-commerce', 'azure-mgmt-commerce')
+        </script>
+    </embed>
+
+------------
+

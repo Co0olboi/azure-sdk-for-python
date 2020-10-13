@@ -1,0 +1,28 @@
+
+===============
+Healthcare APIs
+===============
+
+
+*******************
+Management Packages
+*******************
+
+
+-------------------------
+azure-mgmt-healthcareapis
+-------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-healthcareapis"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-healthcareapis', 'azure-mgmt-healthcareapis')
+        </script>
+    </embed>
+
+------------
+

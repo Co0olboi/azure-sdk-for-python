@@ -1,0 +1,28 @@
+
+=================
+Management Groups
+=================
+
+
+*******************
+Management Packages
+*******************
+
+
+---------------------------
+azure-mgmt-managementgroups
+---------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-managementgroups"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-managementgroups', 'azure-mgmt-managementgroups')
+        </script>
+    </embed>
+
+------------
+

@@ -1,0 +1,28 @@
+
+===========
+Bot Service
+===========
+
+
+*******************
+Management Packages
+*******************
+
+
+---------------------
+azure-mgmt-botservice
+---------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-botservice"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-botservice', 'azure-mgmt-botservice')
+        </script>
+    </embed>
+
+------------
+

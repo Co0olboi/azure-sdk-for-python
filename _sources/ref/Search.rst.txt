@@ -1,0 +1,46 @@
+
+======
+Search
+======
+
+
+***************
+Client Packages
+***************
+
+
+------------
+azure-search
+------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-search"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-search', 'azure-search')
+        </script>
+    </embed>
+
+------------
+
+
+----------------------
+azure-search-documents
+----------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-search-documents"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-search-documents', 'azure-search-documents')
+        </script>
+    </embed>
+
+------------
+

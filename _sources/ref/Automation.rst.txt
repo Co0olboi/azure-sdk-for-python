@@ -1,0 +1,28 @@
+
+==========
+Automation
+==========
+
+
+*******************
+Management Packages
+*******************
+
+
+---------------------
+azure-mgmt-automation
+---------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-automation"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-automation', 'azure-mgmt-automation')
+        </script>
+    </embed>
+
+------------
+

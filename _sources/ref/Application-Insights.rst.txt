@@ -1,0 +1,51 @@
+
+====================
+Application Insights
+====================
+
+
+***************
+Client Packages
+***************
+
+
+-------------------------
+azure-applicationinsights
+-------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-applicationinsights"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-applicationinsights', 'azure-applicationinsights')
+        </script>
+    </embed>
+
+------------
+
+
+*******************
+Management Packages
+*******************
+
+
+------------------------------
+azure-mgmt-applicationinsights
+------------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-applicationinsights"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-applicationinsights', 'azure-mgmt-applicationinsights')
+        </script>
+    </embed>
+
+------------
+

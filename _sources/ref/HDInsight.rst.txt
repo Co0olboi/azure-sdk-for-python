@@ -1,0 +1,28 @@
+
+=========
+HDInsight
+=========
+
+
+*******************
+Management Packages
+*******************
+
+
+--------------------
+azure-mgmt-hdinsight
+--------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-hdinsight"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-hdinsight', 'azure-mgmt-hdinsight')
+        </script>
+    </embed>
+
+------------
+

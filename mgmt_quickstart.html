@@ -1,0 +1,617 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Quickstart Tutorial - Resource Management &mdash; Azure SDK for Python 2.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/default_overrides.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/js/get_options.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Migration Guide - Resource Management" href="python_mgmt_migration_guide.html" />
+    <link rel="prev" title="Resource Management Authentication" href="quickstart_authentication.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> Azure SDK for Python
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+    
+    
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">User Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart_authentication.html">Resource Management Authentication</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Quickstart Tutorial - Resource Management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#migration-guide">Migration Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#get-subscription-id">Get Subscription ID</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get-client-id-client-secret-tenant-id">Get Client ID / Client Secret / Tenant ID</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setting-environment-variables">Setting Environment Variables</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#authentication-and-creating-management-client">Authentication and Creating Management Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#managing-resources">Managing Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#managing-network">Managing Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#async-and-sync-operations">Async and sync operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#code-samples">Code Samples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#need-help">Need help?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#contributing">Contributing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="python_mgmt_migration_guide.html">Migration Guide - Resource Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multicloud.html">Multi-cloud - use Azure on all regions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exceptions.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="servicemanagement.html">Service Management (Legacy)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Services</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="ref/API-Management.html">API Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Active-Directory.html">Active Directory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Advisor.html">Advisor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Alerts-Management.html">Alerts Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/App-Configuration.html">App Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/App-Service.html">App Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Application-Insights.html">Application Insights</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Attestation.html">Attestation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Authorization.html">Authorization</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Automation.html">Automation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Batch.html">Batch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Billing.html">Billing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Bot-Service.html">Bot Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/CDN.html">CDN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services.html">Cognitive Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Anomaly-Detector.html">Cognitive Services Anomaly Detector</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Knowledge-QnA-Maker.html">Cognitive Services Knowledge QnA Maker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Language-LUIS.html">Cognitive Services Language LUIS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Language-Spellcheck.html">Cognitive Services Language Spellcheck</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Language-TextAnalytics.html">Cognitive Services Language TextAnalytics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Personalizer.html">Cognitive Services Personalizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Recognizer.html">Cognitive Services Recognizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-Autosuggest.html">Cognitive Services Search Autosuggest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-CustomImageSearch.html">Cognitive Services Search CustomImageSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-CustomSearch.html">Cognitive Services Search CustomSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-EntitySearch.html">Cognitive Services Search EntitySearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-ImageSearch.html">Cognitive Services Search ImageSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-NewsSearch.html">Cognitive Services Search NewsSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-VideoSearch.html">Cognitive Services Search VideoSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-VisualSearch.html">Cognitive Services Search VisualSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Search-WebSearch.html">Cognitive Services Search WebSearch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Vision-ComputerVision.html">Cognitive Services Vision ComputerVision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Vision-ContentModerator.html">Cognitive Services Vision ContentModerator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Vision-CustomVision.html">Cognitive Services Vision CustomVision</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cognitive-Services-Vision-Face.html">Cognitive Services Vision Face</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Commerce.html">Commerce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Communication.html">Communication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Consumption.html">Consumption</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Container-Instance.html">Container Instance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Container-Registry.html">Container Registry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Container-Service.html">Container Service</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Core.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cosmos.html">Cosmos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cosmos-DB.html">Cosmos DB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Cost-Management.html">Cost Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/DNS.html">DNS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Data-Bricks.html">Data Bricks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Data-Factory.html">Data Factory</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Data-Lake-Analytics.html">Data Lake Analytics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Data-Lake-Store.html">Data Lake Store</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Data-Share.html">Data Share</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Data-migration.html">Data migration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Deployment-Manager.html">Deployment Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Dev-Test-Labs.html">Dev Test Labs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/DevSpaces.html">DevSpaces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Edge-Gateway.html">Edge Gateway</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Event-Grid.html">Event Grid</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Event-Hub.html">Event Hub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Form-Recognizer.html">Form Recognizer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Front-Door.html">Front Door</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/HDInsight.html">HDInsight</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Healthcare-APIs.html">Healthcare APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Hybrid-Cloud.html">Hybrid Cloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Identity.html">Identity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/ImageBuilder.html">ImageBuilder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/IoT.html">IoT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/IoT-Central.html">IoT Central</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Keyvault.html">Keyvault</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Kusto.html">Kusto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/LabServices.html">LabServices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Log-Analytics.html">Log Analytics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Logic-Apps.html">Logic Apps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/MSI.html">MSI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Machine-Learning-Compute.html">Machine Learning Compute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Managed-Services.html">Managed Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Management-Groups.html">Management Groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Management-Partner.html">Management Partner</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Maps.html">Maps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Market-Place-Ordering.html">Market Place Ordering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Media-Services.html">Media Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Metrics-Advisor.html">Metrics Advisor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Mixed-Reality.html">Mixed Reality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Monitoring.html">Monitoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/NetApp.html">NetApp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Network.html">Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Notification-Hubs.html">Notification Hubs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/OSS-RDBMS.html">OSS RDBMS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Other.html">Other</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Peering.html">Peering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Policy-Insights.html">Policy Insights</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Power-BI-Embedded.html">Power BI Embedded</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Private-DNS.html">Private DNS</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Recovery-Services.html">Recovery Services</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Recovery-Services-Backup.html">Recovery Services Backup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Redis-Cache.html">Redis Cache</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Relay.html">Relay</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Reservations.html">Reservations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Resource-Graph.html">Resource Graph</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Resource-Management.html">Resource Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/SAP-Hana-on-Azure.html">SAP Hana on Azure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/SQL.html">SQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/SQL-Virtual-Machine.html">SQL Virtual Machine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Scheduler.html">Scheduler</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Search.html">Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Search-Management.html">Search Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Security-Management.html">Security Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Serial-Console.html">Serial Console</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Server-Management.html">Server Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Service-Bus.html">Service Bus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Service-Fabric.html">Service Fabric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/SignalR-Management.html">SignalR Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Storage.html">Storage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Storage-Sync.html">Storage Sync</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Subscription.html">Subscription</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Text-Analytics.html">Text Analytics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Traffic-Manager.html">Traffic Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/VMWare-by-CloudSimple.html">VMWare by CloudSimple</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Virtual-Machines.html">Virtual Machines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ref/Web-Apps.html">Web Apps</a></li>
+</ul>
+
+            
+          
+
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Azure SDK for Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Quickstart Tutorial - Resource Management</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/mgmt_quickstart.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="quickstart-tutorial-resource-management">
+<h1>Quickstart Tutorial - Resource Management<a class="headerlink" href="#quickstart-tutorial-resource-management" title="Permalink to this headline">¶</a></h1>
+<p>We are excited to announce that a new set of management libraries are now generally available.
+Those packages share a number of new features such as Azure Identity support,
+HTTP pipeline, error-handling.,etc, and they also follow the new Azure SDK guidelines which
+create easy-to-use APIs that are idiomatic, compatible, and dependable.</p>
+<p>You can find the details of those new libraries <a class="reference external" href="https://azure.github.io/azure-sdk/releases/latest/mgmt/python.html">here</a></p>
+<p>In this basic quickstart guide, we will walk you through how to
+authenticate to Azure using the new libraries and start interacting with
+Azure resources. There are several possible approaches to
+authentication. This document illustrates the most common scenario</p>
+<div class="section" id="migration-guide">
+<h2>Migration Guide<a class="headerlink" href="#migration-guide" title="Permalink to this headline">¶</a></h2>
+<p>If you are an existing user of the older version of Azure management library for Python and you are looking for a migration guide to the new version of the SDK, please refer to <a class="reference external" href="https://github.com/Azure/azure-sdk-for-python/blob/master/doc/sphinx/python_mgmt_migration_guide.rst">this migration guide here</a></p>
+</div>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">You will need the following values to authenticate to Azure</div>
+</div>
+<ul class="simple">
+<li><p><strong>Subscription ID</strong></p></li>
+<li><p><strong>Client ID</strong></p></li>
+<li><p><strong>Client Secret</strong></p></li>
+<li><p><strong>Tenant ID</strong></p></li>
+</ul>
+<p>These values can be obtained from the portal, here’s the instructions:</p>
+<div class="section" id="get-subscription-id">
+<h3>Get Subscription ID<a class="headerlink" href="#get-subscription-id" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Login into your Azure account</p></li>
+<li><p>Select Subscriptions in the left sidebar</p></li>
+<li><p>Select whichever subscription is needed</p></li>
+<li><p>Click on Overview</p></li>
+<li><p>Copy the Subscription ID</p></li>
+</ol>
+</div>
+<div class="section" id="get-client-id-client-secret-tenant-id">
+<h3>Get Client ID / Client Secret / Tenant ID<a class="headerlink" href="#get-client-id-client-secret-tenant-id" title="Permalink to this headline">¶</a></h3>
+<p>For information on how to get Client ID, Client Secret, and Tenant ID, please refer to <a class="reference external" href="https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal">this document</a></p>
+</div>
+<div class="section" id="setting-environment-variables">
+<h3>Setting Environment Variables<a class="headerlink" href="#setting-environment-variables" title="Permalink to this headline">¶</a></h3>
+<p>After you obtained the values, you need to set the following values as
+your environment variables</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">AZURE_CLIENT_ID</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AZURE_CLIENT_SECRET</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AZURE_TENANT_ID</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">AZURE_SUBSCRIPTION_ID</span></code></p></li>
+</ul>
+<p>To set the following environment variables on your development system:</p>
+<p>Windows (Note: Administrator access is required)</p>
+<ol class="arabic simple">
+<li><p>Open the Control Panel</p></li>
+<li><p>Click System Security, then System</p></li>
+<li><p>Click Advanced system settings on the left</p></li>
+<li><p>Inside the System Properties window, click the Environment Variables… button.</p></li>
+<li><p>Click on the property you would like to change, then click the Edit… button. If the property name is not listed, then click the New… button.</p></li>
+</ol>
+<p>Linux-based OS</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">AZURE_CLIENT_ID</span><span class="o">=</span><span class="s2">&quot;__CLIENT_ID__&quot;</span>
+<span class="n">export</span> <span class="n">AZURE_CLIENT_SECRET</span><span class="o">=</span><span class="s2">&quot;__CLIENT_SECRET__&quot;</span>
+<span class="n">export</span> <span class="n">AZURE_TENANT_ID</span><span class="o">=</span><span class="s2">&quot;__TENANT_ID__&quot;</span>
+<span class="n">export</span> <span class="n">AZURE_SUBSCRIPTION_ID</span><span class="o">=</span><span class="s2">&quot;__SUBSCRIPTION_ID__&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="authentication-and-creating-management-client">
+<h2>Authentication and Creating Management Client<a class="headerlink" href="#authentication-and-creating-management-client" title="Permalink to this headline">¶</a></h2>
+<p>Now that the environment is setup, all you need to do is to create an
+authenticated client. Our default option is to use
+<strong>DefaultAzureCredential</strong> and in this guide we have picked
+<strong>Resources</strong> as our target service, but you can set it up similarly for any other service that you are using.</p>
+<p>To authenticate to Azure and create
+a management client, simply do the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">azure.mgmt.resource</span>
+<span class="kn">import</span> <span class="nn">azure.mgmt.network</span>
+<span class="kn">from</span> <span class="nn">azure.identity</span> <span class="kn">import</span> <span class="n">DefaultAzureCredential</span>
+<span class="o">...</span>
+<span class="n">subscription_id</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;AZURE_SUBSCRIPTION_ID&quot;</span><span class="p">)</span>
+<span class="n">credential</span> <span class="o">=</span> <span class="n">DefaultAzureCredential</span><span class="p">()</span>
+<span class="n">resource_client</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">mgmt</span><span class="o">.</span><span class="n">resource</span><span class="o">.</span><span class="n">ResourceManagementClient</span><span class="p">(</span><span class="n">credential</span><span class="o">=</span><span class="n">credential</span><span class="p">,</span> <span class="n">subscription_id</span><span class="o">=</span><span class="n">subscription_id</span><span class="p">)</span>
+<span class="n">network_client</span> <span class="o">=</span> <span class="n">azure</span><span class="o">.</span><span class="n">mgmt</span><span class="o">.</span><span class="n">network</span><span class="o">.</span><span class="n">NetworkManagementClient</span><span class="p">(</span><span class="n">credential</span><span class="o">=</span><span class="n">credential</span><span class="p">,</span> <span class="n">subscription_id</span><span class="o">=</span><span class="n">subscription_id</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>More detailed information and different authentication approaches using Azure Identity can be found in
+<a class="reference external" href="https://docs.microsoft.com/python/azure/python-sdk-azure-authenticate">this document</a></p>
+</div>
+<div class="section" id="managing-resources">
+<h2>Managing Resources<a class="headerlink" href="#managing-resources" title="Permalink to this headline">¶</a></h2>
+<p>Now that we are authenticated, we can use the Resource client (azure.mgmt.resource.ResourceManagementClient) we have created to perform operations on Resource Group. In this example, we will show to manage Resource Groups.</p>
+<p><strong>Create a resource group</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">location</span> <span class="o">=</span> <span class="s2">&quot;westus2&quot;</span>
+<span class="n">group_name</span> <span class="o">=</span> <span class="s2">&quot;my_resource_group_name&quot;</span>
+<span class="n">group</span> <span class="o">=</span> <span class="n">resource_client</span><span class="o">.</span><span class="n">resource_groups</span><span class="o">.</span><span class="n">create_or_update</span><span class="p">(</span>
+    <span class="n">group_name</span><span class="p">,</span>
+    <span class="p">{</span><span class="s1">&#39;location&#39;</span><span class="p">:</span> <span class="n">location</span><span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Update a resource group</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">group_name</span> <span class="o">=</span> <span class="s2">&quot;my_resource_group_name&quot;</span>
+<span class="n">group</span><span class="o">.</span><span class="n">tags</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;environment&quot;</span><span class="p">:</span><span class="s2">&quot;test&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;department&quot;</span><span class="p">:</span><span class="s2">&quot;tech&quot;</span>
+<span class="p">}</span>
+<span class="n">updated_group</span> <span class="o">=</span> <span class="n">resource_client</span><span class="o">.</span><span class="n">resource_groups</span><span class="o">.</span><span class="n">create_or_update</span><span class="p">(</span><span class="n">group_name</span><span class="p">,</span> <span class="n">group</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>List all resource groups</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">group_list</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">resource_client</span><span class="o">.</span><span class="n">resource_groups</span><span class="o">.</span><span class="n">list</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">group_list</span><span class="p">:</span>
+    <span class="n">print_resource_group</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Delete a resource group</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">delete_async_op</span> <span class="o">=</span> <span class="n">resource_client</span><span class="o">.</span><span class="n">resource_groups</span><span class="o">.</span><span class="n">begin_delete</span><span class="p">(</span><span class="n">group_name</span><span class="p">)</span>
+<span class="n">delete_async_op</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="managing-network">
+<h2>Managing Network<a class="headerlink" href="#managing-network" title="Permalink to this headline">¶</a></h2>
+<p>We can use the Network client (azure.mgmt.resource.NetworkManagementClient) we have created to perform operations on Network related resources. In this example, we will show how to manage Public IP Addresses.</p>
+<p><strong>Create a Network Public IP Address</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GROUP_NAME</span> <span class="o">=</span> <span class="s2">&quot;testgroup&quot;</span>
+<span class="n">PUBLIC_IP_ADDRESS</span> <span class="o">=</span> <span class="s2">&quot;public_ip_address_name&quot;</span>
+
+<span class="c1"># Create Resource Group</span>
+<span class="n">resource_client</span><span class="o">.</span><span class="n">resource_groups</span><span class="o">.</span><span class="n">create_or_update</span><span class="p">(</span>
+    <span class="n">GROUP_NAME</span><span class="p">,</span>
+    <span class="p">{</span><span class="s2">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;eastus&quot;</span><span class="p">}</span>
+<span class="p">)</span>
+
+<span class="c1"># Create Public IP Address</span>
+<span class="n">public_ip_address</span> <span class="o">=</span> <span class="n">network_client</span><span class="o">.</span><span class="n">public_ip_addresses</span><span class="o">.</span><span class="n">begin_create_or_update</span><span class="p">(</span>
+    <span class="n">GROUP_NAME</span><span class="p">,</span>
+    <span class="n">PUBLIC_IP_ADDRESS</span><span class="p">,</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;eastus&quot;</span>
+    <span class="p">}</span>
+<span class="p">)</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Create Public IP Address:</span><span class="se">\n</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">public_ip_address</span><span class="p">))</span>
+</pre></div>
+</div>
+<p><strong>Get a Network Public IP Address</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">public_ip_address</span> <span class="o">=</span> <span class="n">network_client</span><span class="o">.</span><span class="n">public_ip_addresses</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+  <span class="n">GROUP_NAME</span><span class="p">,</span>
+  <span class="n">PUBLIC_IP_ADDRESS</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Get Public IP Address:</span><span class="se">\n</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">public_ip_address</span><span class="p">))</span>
+</pre></div>
+</div>
+<p><strong>Update tags in Network Public IP Address</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Update Public IP Address</span>
+<span class="n">public_ip_address</span> <span class="o">=</span> <span class="n">network_client</span><span class="o">.</span><span class="n">public_ip_addresses</span><span class="o">.</span><span class="n">update_tags</span><span class="p">(</span>
+  <span class="n">GROUP_NAME</span><span class="p">,</span>
+  <span class="n">PUBLIC_IP_ADDRESS</span><span class="p">,</span>
+  <span class="p">{</span>
+    <span class="s2">&quot;tags&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s2">&quot;tag1&quot;</span><span class="p">:</span> <span class="s2">&quot;value1&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;tag2&quot;</span><span class="p">:</span> <span class="s2">&quot;value2&quot;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Updated Public IP Address </span><span class="se">\n</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">public_ip_address</span><span class="p">))</span>
+</pre></div>
+</div>
+<p><strong>Delete a Network Public IP Address</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Delete Public IP Address</span>
+<span class="n">public_ip_address</span> <span class="o">=</span> <span class="n">network_client</span><span class="o">.</span><span class="n">public_ip_addresses</span><span class="o">.</span><span class="n">begin_delete</span><span class="p">(</span>
+  <span class="n">GROUP_NAME</span><span class="p">,</span>
+  <span class="n">PUBLIC_IP_ADDRESS</span>
+<span class="p">)</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Delete Public IP Address.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="async-and-sync-operations">
+<h2>Async and sync operations<a class="headerlink" href="#async-and-sync-operations" title="Permalink to this headline">¶</a></h2>
+<p>In python&gt;=3.5, Azure Python SDK provides the choice for user to use the asynchronous client for asynchronous programming.</p>
+<p>Note that asyncio in Windows is underpowered and please take caution when using async operations on Windows systems</p>
+<p><strong>Create Async Management Client</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">azure.identity.aio</span> <span class="kn">import</span> <span class="n">DefaultAzureCredential</span>
+<span class="kn">from</span> <span class="nn">azure.mgmt.network.aio</span> <span class="kn">import</span> <span class="n">NetworkManagementClient</span>
+<span class="kn">from</span> <span class="nn">azure.mgmt.resource.resources.aio</span> <span class="kn">import</span> <span class="n">ResourceManagementClient</span>
+
+<span class="n">SUBSCRIPTION_ID</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;SUBSCRIPTION_ID&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">credential</span> <span class="o">=</span> <span class="n">DefaultAzureCredential</span><span class="p">()</span>
+<span class="n">resource_client</span> <span class="o">=</span> <span class="n">ResourceManagementClient</span><span class="p">(</span>
+    <span class="n">credential</span><span class="o">=</span><span class="n">credential</span><span class="p">,</span>
+    <span class="n">subscription_id</span><span class="o">=</span><span class="n">SUBSCRIPTION_ID</span>
+<span class="p">)</span>
+<span class="n">network_client</span> <span class="o">=</span> <span class="n">NetworkManagementClient</span><span class="p">(</span>
+    <span class="n">credential</span><span class="o">=</span><span class="n">credential</span><span class="p">,</span>
+    <span class="n">subscription_id</span><span class="o">=</span><span class="n">SUBSCRIPTION_ID</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Create a Network Public IP Address Async</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GROUP_NAME</span> <span class="o">=</span> <span class="s2">&quot;testgroup&quot;</span>
+<span class="n">PUBLIC_IP_ADDRESS</span> <span class="o">=</span> <span class="s2">&quot;public_ip_address_name&quot;</span>
+
+<span class="c1"># Create Resource Group</span>
+<span class="k">await</span> <span class="n">resource_client</span><span class="o">.</span><span class="n">resource_groups</span><span class="o">.</span><span class="n">create_or_update</span><span class="p">(</span>
+    <span class="n">GROUP_NAME</span><span class="p">,</span>
+    <span class="p">{</span><span class="s2">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;eastus&quot;</span><span class="p">}</span>
+<span class="p">)</span>
+
+<span class="c1"># Create Public IP Address</span>
+<span class="n">async_poller</span> <span class="o">=</span> <span class="k">await</span> <span class="n">network_client</span><span class="o">.</span><span class="n">public_ip_addresses</span><span class="o">.</span><span class="n">begin_create_or_update</span><span class="p">(</span>
+    <span class="n">GROUP_NAME</span><span class="p">,</span>
+    <span class="n">PUBLIC_IP_ADDRESS</span><span class="p">,</span>
+    <span class="p">{</span>
+    <span class="s2">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;eastus&quot;</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+<span class="n">public_ip_address</span> <span class="o">=</span> <span class="k">await</span> <span class="n">async_poller</span><span class="o">.</span><span class="n">result</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Create Public IP Address:</span><span class="se">\n</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">public_ip_address</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="code-samples">
+<h2>Code Samples<a class="headerlink" href="#code-samples" title="Permalink to this headline">¶</a></h2>
+<p>For more code samples that demonstrate how to use our SDK to interact with Azure services, please visit <a class="reference external" href="https://docs.microsoft.com/samples/browse/?languages=python&amp;term=Getting%20started%20-%20Managing">here</a>. You can also view the Github repo that contains the code samples <a class="reference external" href="https://github.com/Azure-Samples/azure-samples-python-management">here</a></p>
+</div>
+<div class="section" id="need-help">
+<h2>Need help?<a class="headerlink" href="#need-help" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>File an issue via <a class="reference external" href="https://github.com/Azure/azure-sdk-for-python/issues">Github Issues</a></p></li>
+<li><p>Check <a class="reference external" href="https://stackoverflow.com/questions/tagged/azure+python">previous questions</a> or ask new ones on StackOverflow using azure and python tags.</p></li>
+</ul>
+</div>
+<div class="section" id="contributing">
+<h2>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h2>
+<p>For details on contributing to this repository, see the contributing guide.</p>
+<p>This project welcomes contributions and suggestions. Most contributions require you to agree to a Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us the rights to use your contribution. For details, visit <a class="reference external" href="https://cla.microsoft.com">https://cla.microsoft.com</a>.</p>
+<p>When you submit a pull request, a CLA-bot will automatically determine whether you need to provide a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions provided by the bot. You will only need to do this once across all repositories using our CLA.</p>
+<p>This project has adopted the Microsoft Open Source Code of Conduct. For more information see the Code of Conduct FAQ or contact <a class="reference external" href="mailto:opencode&#37;&#52;&#48;microsoft&#46;com">opencode<span>&#64;</span>microsoft<span>&#46;</span>com</a> with any additional questions or comments.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="python_mgmt_migration_guide.html" class="btn btn-neutral float-right" title="Migration Guide - Resource Management" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="quickstart_authentication.html" class="btn btn-neutral float-left" title="Resource Management Authentication" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, Microsoft
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-62780441-36"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-62780441-36');
+</script>
+
+
+</body>
+</html>

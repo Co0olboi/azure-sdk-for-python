@@ -1,0 +1,28 @@
+
+=====
+Kusto
+=====
+
+
+*******************
+Management Packages
+*******************
+
+
+----------------
+azure-mgmt-kusto
+----------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-kusto"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-kusto', 'azure-mgmt-kusto')
+        </script>
+    </embed>
+
+------------
+

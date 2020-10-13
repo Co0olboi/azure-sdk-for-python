@@ -1,0 +1,51 @@
+
+=============
+Log Analytics
+=============
+
+
+***************
+Client Packages
+***************
+
+
+------------------
+azure-loganalytics
+------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-loganalytics"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-loganalytics', 'azure-loganalytics')
+        </script>
+    </embed>
+
+------------
+
+
+*******************
+Management Packages
+*******************
+
+
+-----------------------
+azure-mgmt-loganalytics
+-----------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-loganalytics"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-loganalytics', 'azure-mgmt-loganalytics')
+        </script>
+    </embed>
+
+------------
+

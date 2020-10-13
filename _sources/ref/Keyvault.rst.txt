@@ -1,0 +1,87 @@
+
+========
+Keyvault
+========
+
+
+***************
+Client Packages
+***************
+
+
+---------------------------
+azure-keyvault-certificates
+---------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-keyvault-certificates"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-keyvault-certificates', 'azure-keyvault-certificates')
+        </script>
+    </embed>
+
+------------
+
+
+-------------------
+azure-keyvault-keys
+-------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-keyvault-keys"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-keyvault-keys', 'azure-keyvault-keys')
+        </script>
+    </embed>
+
+------------
+
+
+----------------------
+azure-keyvault-secrets
+----------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-keyvault-secrets"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-keyvault-secrets', 'azure-keyvault-secrets')
+        </script>
+    </embed>
+
+------------
+
+
+*******************
+Management Packages
+*******************
+
+
+-------------------
+azure-mgmt-keyvault
+-------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-keyvault"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-keyvault', 'azure-mgmt-keyvault')
+        </script>
+    </embed>
+
+------------
+

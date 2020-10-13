@@ -1,0 +1,28 @@
+
+============
+Subscription
+============
+
+
+*******************
+Management Packages
+*******************
+
+
+-----------------------
+azure-mgmt-subscription
+-----------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-subscription"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-subscription', 'azure-mgmt-subscription')
+        </script>
+    </embed>
+
+------------
+

@@ -1,0 +1,28 @@
+
+===================================
+Cognitive Services Anomaly Detector
+===================================
+
+
+***************
+Client Packages
+***************
+
+
+---------------------------------------
+azure-cognitiveservices-anomalydetector
+---------------------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-cognitiveservices-anomalydetector"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-cognitiveservices-anomalydetector', 'azure-cognitiveservices-anomalydetector')
+        </script>
+    </embed>
+
+------------
+

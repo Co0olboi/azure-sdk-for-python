@@ -1,0 +1,28 @@
+
+========================================
+Cognitive Services Vision ComputerVision
+========================================
+
+
+***************
+Client Packages
+***************
+
+
+---------------------------------------------
+azure-cognitiveservices-vision-computervision
+---------------------------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-cognitiveservices-vision-computervision"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-cognitiveservices-vision-computervision', 'azure-cognitiveservices-vision-computervision')
+        </script>
+    </embed>
+
+------------
+

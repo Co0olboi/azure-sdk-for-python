@@ -1,0 +1,28 @@
+
+===========
+Private DNS
+===========
+
+
+*******************
+Management Packages
+*******************
+
+
+---------------------
+azure-mgmt-privatedns
+---------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-privatedns"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-privatedns', 'azure-mgmt-privatedns')
+        </script>
+    </embed>
+
+------------
+

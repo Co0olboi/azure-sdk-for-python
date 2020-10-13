@@ -1,0 +1,28 @@
+
+==============
+Serial Console
+==============
+
+
+*******************
+Management Packages
+*******************
+
+
+------------------------
+azure-mgmt-serialconsole
+------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-serialconsole"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-serialconsole', 'azure-mgmt-serialconsole')
+        </script>
+    </embed>
+
+------------
+

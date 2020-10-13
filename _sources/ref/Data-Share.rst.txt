@@ -1,0 +1,28 @@
+
+==========
+Data Share
+==========
+
+
+*******************
+Management Packages
+*******************
+
+
+--------------------
+azure-mgmt-datashare
+--------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-datashare"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-datashare', 'azure-mgmt-datashare')
+        </script>
+    </embed>
+
+------------
+

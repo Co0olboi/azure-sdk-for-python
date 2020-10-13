@@ -1,0 +1,28 @@
+
+=================
+Alerts Management
+=================
+
+
+*******************
+Management Packages
+*******************
+
+
+---------------------------
+azure-mgmt-alertsmanagement
+---------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-alertsmanagement"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-alertsmanagement', 'azure-mgmt-alertsmanagement')
+        </script>
+    </embed>
+
+------------
+

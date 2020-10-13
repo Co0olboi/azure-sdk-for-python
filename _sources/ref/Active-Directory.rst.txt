@@ -1,0 +1,28 @@
+
+================
+Active Directory
+================
+
+
+***************
+Client Packages
+***************
+
+
+---------------
+azure-graphrbac
+---------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-graphrbac"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-graphrbac', 'azure-graphrbac')
+        </script>
+    </embed>
+
+------------
+

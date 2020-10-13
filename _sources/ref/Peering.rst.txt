@@ -1,0 +1,28 @@
+
+=======
+Peering
+=======
+
+
+*******************
+Management Packages
+*******************
+
+
+------------------
+azure-mgmt-peering
+------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-peering"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-peering', 'azure-mgmt-peering')
+        </script>
+    </embed>
+
+------------
+

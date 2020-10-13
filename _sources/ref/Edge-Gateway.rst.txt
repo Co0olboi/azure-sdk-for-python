@@ -1,0 +1,28 @@
+
+============
+Edge Gateway
+============
+
+
+*******************
+Management Packages
+*******************
+
+
+----------------------
+azure-mgmt-edgegateway
+----------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-edgegateway"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-edgegateway', 'azure-mgmt-edgegateway')
+        </script>
+    </embed>
+
+------------
+

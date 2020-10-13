@@ -1,0 +1,28 @@
+
+=====
+Relay
+=====
+
+
+*******************
+Management Packages
+*******************
+
+
+----------------
+azure-mgmt-relay
+----------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-relay"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-relay', 'azure-mgmt-relay')
+        </script>
+    </embed>
+
+------------
+

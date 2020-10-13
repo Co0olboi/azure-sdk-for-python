@@ -1,0 +1,28 @@
+
+=============
+Mixed Reality
+=============
+
+
+*******************
+Management Packages
+*******************
+
+
+-----------------------
+azure-mgmt-mixedreality
+-----------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-mixedreality"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-mixedreality', 'azure-mgmt-mixedreality')
+        </script>
+    </embed>
+
+------------
+

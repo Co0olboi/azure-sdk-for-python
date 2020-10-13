@@ -1,0 +1,28 @@
+
+=====================================
+Cognitive Services Search ImageSearch
+=====================================
+
+
+***************
+Client Packages
+***************
+
+
+------------------------------------------
+azure-cognitiveservices-search-imagesearch
+------------------------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-cognitiveservices-search-imagesearch"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-cognitiveservices-search-imagesearch', 'azure-cognitiveservices-search-imagesearch')
+        </script>
+    </embed>
+
+------------
+

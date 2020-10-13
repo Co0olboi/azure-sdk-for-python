@@ -1,0 +1,28 @@
+
+======================================
+Cognitive Services Knowledge QnA Maker
+======================================
+
+
+***************
+Client Packages
+***************
+
+
+------------------------------------------
+azure-cognitiveservices-knowledge-qnamaker
+------------------------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-cognitiveservices-knowledge-qnamaker"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-cognitiveservices-knowledge-qnamaker', 'azure-cognitiveservices-knowledge-qnamaker')
+        </script>
+    </embed>
+
+------------
+

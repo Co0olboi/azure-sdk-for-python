@@ -1,0 +1,28 @@
+
+=======
+Billing
+=======
+
+
+*******************
+Management Packages
+*******************
+
+
+------------------
+azure-mgmt-billing
+------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-billing"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-billing', 'azure-mgmt-billing')
+        </script>
+    </embed>
+
+------------
+

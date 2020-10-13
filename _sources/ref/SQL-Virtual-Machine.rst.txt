@@ -1,0 +1,28 @@
+
+===================
+SQL Virtual Machine
+===================
+
+
+*******************
+Management Packages
+*******************
+
+
+----------------------------
+azure-mgmt-sqlvirtualmachine
+----------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-sqlvirtualmachine"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-sqlvirtualmachine', 'azure-mgmt-sqlvirtualmachine')
+        </script>
+    </embed>
+
+------------
+

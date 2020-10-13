@@ -1,0 +1,28 @@
+
+===
+DNS
+===
+
+
+*******************
+Management Packages
+*******************
+
+
+--------------
+azure-mgmt-dns
+--------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-dns"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-dns', 'azure-mgmt-dns')
+        </script>
+    </embed>
+
+------------
+

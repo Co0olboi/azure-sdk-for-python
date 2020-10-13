@@ -1,0 +1,28 @@
+
+================
+Managed Services
+================
+
+
+*******************
+Management Packages
+*******************
+
+
+--------------------------
+azure-mgmt-managedservices
+--------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-managedservices"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-managedservices', 'azure-mgmt-managedservices')
+        </script>
+    </embed>
+
+------------
+

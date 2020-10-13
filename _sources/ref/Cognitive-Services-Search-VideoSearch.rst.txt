@@ -1,0 +1,28 @@
+
+=====================================
+Cognitive Services Search VideoSearch
+=====================================
+
+
+***************
+Client Packages
+***************
+
+
+------------------------------------------
+azure-cognitiveservices-search-videosearch
+------------------------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-cognitiveservices-search-videosearch"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-cognitiveservices-search-videosearch', 'azure-cognitiveservices-search-videosearch')
+        </script>
+    </embed>
+
+------------
+

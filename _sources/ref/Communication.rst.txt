@@ -1,0 +1,87 @@
+
+=============
+Communication
+=============
+
+
+***************
+Client Packages
+***************
+
+
+----------------------------------
+azure-communication-administration
+----------------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-communication-administration"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-communication-administration', 'azure-communication-administration')
+        </script>
+    </embed>
+
+------------
+
+
+------------------------
+azure-communication-chat
+------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-communication-chat"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-communication-chat', 'azure-communication-chat')
+        </script>
+    </embed>
+
+------------
+
+
+-----------------------
+azure-communication-sms
+-----------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-communication-sms"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-communication-sms', 'azure-communication-sms')
+        </script>
+    </embed>
+
+------------
+
+
+*******************
+Management Packages
+*******************
+
+
+------------------------
+azure-mgmt-communication
+------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-communication"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-communication', 'azure-mgmt-communication')
+        </script>
+    </embed>
+
+------------
+

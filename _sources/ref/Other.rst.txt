@@ -1,0 +1,622 @@
+
+=====
+Other
+=====
+
+
+**************
+Other Packages
+**************
+
+
+------------------------
+azure-ai-anomalydetector
+------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-ai-anomalydetector"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-ai-anomalydetector', 'azure-ai-anomalydetector')
+        </script>
+    </embed>
+
+------------
+
+
+------------
+azure-common
+------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-common"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-common', 'azure-common')
+        </script>
+    </embed>
+
+------------
+
+
+-----------------
+azure-data-tables
+-----------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-data-tables"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-data-tables', 'azure-data-tables')
+        </script>
+    </embed>
+
+------------
+
+
+----------------------------------
+azure-eventhub-checkpointstoreblob
+----------------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-eventhub-checkpointstoreblob"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-eventhub-checkpointstoreblob', 'azure-eventhub-checkpointstoreblob')
+        </script>
+    </embed>
+
+------------
+
+
+-----------------------------
+azure-keyvault-administration
+-----------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-keyvault-administration"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-keyvault-administration', 'azure-keyvault-administration')
+        </script>
+    </embed>
+
+------------
+
+
+---------------------
+azure-mgmt-automanage
+---------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-automanage"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-automanage', 'azure-mgmt-automanage')
+        </script>
+    </embed>
+
+------------
+
+
+---------------------
+azure-mgmt-azurestack
+---------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-azurestack"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-azurestack', 'azure-mgmt-azurestack')
+        </script>
+    </embed>
+
+------------
+
+
+----------------------------------
+azure-mgmt-baremetalinfrastructure
+----------------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-baremetalinfrastructure"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-baremetalinfrastructure', 'azure-mgmt-baremetalinfrastructure')
+        </script>
+    </embed>
+
+------------
+
+
+---------------
+azure-mgmt-core
+---------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-core"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-core', 'azure-mgmt-core')
+        </script>
+    </embed>
+
+------------
+
+
+--------------------------
+azure-mgmt-customproviders
+--------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-customproviders"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-customproviders', 'azure-mgmt-customproviders')
+        </script>
+    </embed>
+
+------------
+
+
+------------------
+azure-mgmt-databox
+------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-databox"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-databox', 'azure-mgmt-databox')
+        </script>
+    </embed>
+
+------------
+
+
+----------------------
+azure-mgmt-databoxedge
+----------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-databoxedge"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-databoxedge', 'azure-mgmt-databoxedge')
+        </script>
+    </embed>
+
+------------
+
+
+-----------------------
+azure-mgmt-digitaltwins
+-----------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-digitaltwins"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-digitaltwins', 'azure-mgmt-digitaltwins')
+        </script>
+    </embed>
+
+------------
+
+
+---------------------------
+azure-mgmt-hybridkubernetes
+---------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-hybridkubernetes"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-hybridkubernetes', 'azure-mgmt-hybridkubernetes')
+        </script>
+    </embed>
+
+------------
+
+
+----------------------------------
+azure-mgmt-kubernetesconfiguration
+----------------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-kubernetesconfiguration"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-kubernetesconfiguration', 'azure-mgmt-kubernetesconfiguration')
+        </script>
+    </embed>
+
+------------
+
+
+----------------------
+azure-mgmt-maintenance
+----------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-maintenance"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-maintenance', 'azure-mgmt-maintenance')
+        </script>
+    </embed>
+
+------------
+
+
+-------------------------------
+azure-mgmt-operationsmanagement
+-------------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-operationsmanagement"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-operationsmanagement', 'azure-mgmt-operationsmanagement')
+        </script>
+    </embed>
+
+------------
+
+
+---------------------------
+azure-mgmt-powerbidedicated
+---------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-powerbidedicated"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-powerbidedicated', 'azure-mgmt-powerbidedicated')
+        </script>
+    </embed>
+
+------------
+
+
+--------------------------
+azure-mgmt-redhatopenshift
+--------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-redhatopenshift"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-redhatopenshift', 'azure-mgmt-redhatopenshift')
+        </script>
+    </embed>
+
+------------
+
+
+---------------------
+azure-mgmt-regionmove
+---------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-regionmove"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-regionmove', 'azure-mgmt-regionmove')
+        </script>
+    </embed>
+
+------------
+
+
+------------------------
+azure-mgmt-resourcemover
+------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-resourcemover"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-resourcemover', 'azure-mgmt-resourcemover')
+        </script>
+    </embed>
+
+------------
+
+
+------------------------------
+azure-mgmt-storageimportexport
+------------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-storageimportexport"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-storageimportexport', 'azure-mgmt-storageimportexport')
+        </script>
+    </embed>
+
+------------
+
+
+--------------------------
+azure-mgmt-streamanalytics
+--------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-streamanalytics"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-streamanalytics', 'azure-mgmt-streamanalytics')
+        </script>
+    </embed>
+
+------------
+
+
+------------------
+azure-mgmt-support
+------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-support"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-support', 'azure-mgmt-support')
+        </script>
+    </embed>
+
+------------
+
+
+------------------
+azure-mgmt-synapse
+------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-synapse"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-synapse', 'azure-mgmt-synapse')
+        </script>
+    </embed>
+
+------------
+
+
+-----------------------------
+azure-mgmt-timeseriesinsights
+-----------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-timeseriesinsights"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-timeseriesinsights', 'azure-mgmt-timeseriesinsights')
+        </script>
+    </embed>
+
+------------
+
+
+--------------------
+azure-schemaregistry
+--------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-schemaregistry"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-schemaregistry', 'azure-schemaregistry')
+        </script>
+    </embed>
+
+------------
+
+
+-----------------------------------
+azure-schemaregistry-avroserializer
+-----------------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-schemaregistry-avroserializer"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-schemaregistry-avroserializer', 'azure-schemaregistry-avroserializer')
+        </script>
+    </embed>
+
+------------
+
+
+-------------
+azure-storage
+-------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-storage"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-storage', 'azure-storage')
+        </script>
+    </embed>
+
+------------
+
+
+-------------
+azure-synapse
+-------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-synapse"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-synapse', 'azure-synapse')
+        </script>
+    </embed>
+
+------------
+
+
+---------------------------
+azure-synapse-accesscontrol
+---------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-synapse-accesscontrol"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-synapse-accesscontrol', 'azure-synapse-accesscontrol')
+        </script>
+    </embed>
+
+------------
+
+
+-----------------------
+azure-synapse-artifacts
+-----------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-synapse-artifacts"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-synapse-artifacts', 'azure-synapse-artifacts')
+        </script>
+    </embed>
+
+------------
+
+
+-------------------
+azure-synapse-spark
+-------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-synapse-spark"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-synapse-spark', 'azure-synapse-spark')
+        </script>
+    </embed>
+
+------------
+
+
+--------------
+azure-template
+--------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-template"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-template', 'azure-template')
+        </script>
+    </embed>
+
+------------
+

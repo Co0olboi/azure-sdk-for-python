@@ -1,0 +1,28 @@
+
+======
+Cosmos
+======
+
+
+***************
+Client Packages
+***************
+
+
+------------
+azure-cosmos
+------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-cosmos"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-cosmos', 'azure-cosmos')
+        </script>
+    </embed>
+
+------------
+

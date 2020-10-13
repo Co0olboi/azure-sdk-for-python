@@ -1,0 +1,28 @@
+
+===================================
+Cognitive Services Search WebSearch
+===================================
+
+
+***************
+Client Packages
+***************
+
+
+----------------------------------------
+azure-cognitiveservices-search-websearch
+----------------------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-cognitiveservices-search-websearch"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-cognitiveservices-search-websearch', 'azure-cognitiveservices-search-websearch')
+        </script>
+    </embed>
+
+------------
+

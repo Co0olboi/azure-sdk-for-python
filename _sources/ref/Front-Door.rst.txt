@@ -1,0 +1,28 @@
+
+==========
+Front Door
+==========
+
+
+*******************
+Management Packages
+*******************
+
+
+--------------------
+azure-mgmt-frontdoor
+--------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-frontdoor"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-frontdoor', 'azure-mgmt-frontdoor')
+        </script>
+    </embed>
+
+------------
+

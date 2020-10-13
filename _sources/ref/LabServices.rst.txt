@@ -1,0 +1,28 @@
+
+===========
+LabServices
+===========
+
+
+*******************
+Management Packages
+*******************
+
+
+----------------------
+azure-mgmt-labservices
+----------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-labservices"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-labservices', 'azure-mgmt-labservices')
+        </script>
+    </embed>
+
+------------
+

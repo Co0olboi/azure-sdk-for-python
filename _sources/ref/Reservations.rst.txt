@@ -1,0 +1,28 @@
+
+============
+Reservations
+============
+
+
+*******************
+Management Packages
+*******************
+
+
+-----------------------
+azure-mgmt-reservations
+-----------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-reservations"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-reservations', 'azure-mgmt-reservations')
+        </script>
+    </embed>
+
+------------
+

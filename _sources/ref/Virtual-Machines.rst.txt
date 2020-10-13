@@ -1,0 +1,28 @@
+
+================
+Virtual Machines
+================
+
+
+*******************
+Management Packages
+*******************
+
+
+------------------
+azure-mgmt-compute
+------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-compute"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-compute', 'azure-mgmt-compute')
+        </script>
+    </embed>
+
+------------
+

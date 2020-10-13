@@ -1,0 +1,28 @@
+
+=====================
+Market Place Ordering
+=====================
+
+
+*******************
+Management Packages
+*******************
+
+
+------------------------------
+azure-mgmt-marketplaceordering
+------------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-marketplaceordering"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-marketplaceordering', 'azure-mgmt-marketplaceordering')
+        </script>
+    </embed>
+
+------------
+

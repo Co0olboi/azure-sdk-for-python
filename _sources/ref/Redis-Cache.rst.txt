@@ -1,0 +1,28 @@
+
+===========
+Redis Cache
+===========
+
+
+*******************
+Management Packages
+*******************
+
+
+----------------
+azure-mgmt-redis
+----------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-redis"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-redis', 'azure-mgmt-redis')
+        </script>
+    </embed>
+
+------------
+

@@ -1,0 +1,28 @@
+
+=======
+Advisor
+=======
+
+
+*******************
+Management Packages
+*******************
+
+
+------------------
+azure-mgmt-advisor
+------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-advisor"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-advisor', 'azure-mgmt-advisor')
+        </script>
+    </embed>
+
+------------
+

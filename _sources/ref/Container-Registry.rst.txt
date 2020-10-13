@@ -1,0 +1,28 @@
+
+==================
+Container Registry
+==================
+
+
+*******************
+Management Packages
+*******************
+
+
+----------------------------
+azure-mgmt-containerregistry
+----------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-containerregistry"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-containerregistry', 'azure-mgmt-containerregistry')
+        </script>
+    </embed>
+
+------------
+

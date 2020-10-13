@@ -1,0 +1,28 @@
+
+==============
+Text Analytics
+==============
+
+
+***************
+Client Packages
+***************
+
+
+----------------------
+azure-ai-textanalytics
+----------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-ai-textanalytics"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-ai-textanalytics', 'azure-ai-textanalytics')
+        </script>
+    </embed>
+
+------------
+

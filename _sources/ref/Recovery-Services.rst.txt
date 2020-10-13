@@ -1,0 +1,28 @@
+
+=================
+Recovery Services
+=================
+
+
+*******************
+Management Packages
+*******************
+
+
+---------------------------
+azure-mgmt-recoveryservices
+---------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-recoveryservices"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-recoveryservices', 'azure-mgmt-recoveryservices')
+        </script>
+    </embed>
+
+------------
+

@@ -1,0 +1,28 @@
+
+==============
+API Management
+==============
+
+
+*******************
+Management Packages
+*******************
+
+
+------------------------
+azure-mgmt-apimanagement
+------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-apimanagement"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-apimanagement', 'azure-mgmt-apimanagement')
+        </script>
+    </embed>
+
+------------
+

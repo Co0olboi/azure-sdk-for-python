@@ -1,0 +1,28 @@
+
+===========
+App Service
+===========
+
+
+*******************
+Management Packages
+*******************
+
+
+----------------------
+azure-mgmt-appplatform
+----------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-appplatform"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-appplatform', 'azure-mgmt-appplatform')
+        </script>
+    </embed>
+
+------------
+

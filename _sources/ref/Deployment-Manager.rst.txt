@@ -1,0 +1,28 @@
+
+==================
+Deployment Manager
+==================
+
+
+*******************
+Management Packages
+*******************
+
+
+----------------------------
+azure-mgmt-deploymentmanager
+----------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-deploymentmanager"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-deploymentmanager', 'azure-mgmt-deploymentmanager')
+        </script>
+    </embed>
+
+------------
+

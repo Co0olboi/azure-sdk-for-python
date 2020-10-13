@@ -1,0 +1,28 @@
+
+===============
+Cost Management
+===============
+
+
+*******************
+Management Packages
+*******************
+
+
+-------------------------
+azure-mgmt-costmanagement
+-------------------------
+
+**Published Versions**
+
+.. raw:: html
+
+    <embed>
+        <ul id="vazure-mgmt-costmanagement"></ul>
+        <script type="text/javascript">
+            populateIndexList('#vazure-mgmt-costmanagement', 'azure-mgmt-costmanagement')
+        </script>
+    </embed>
+
+------------
+
